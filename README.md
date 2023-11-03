@@ -17,3 +17,5 @@ the dotfiles i use for debian linux
  - Music: Spotify/Navidrome
  - Browser: Librewolf with ericmurpyxyz's theme/Chrome for some school things
  - Editor: Stock Vim/VSCodium
+
+credit to ericmurpyxyz, i used alot of his dotfiles. please note, i dont claim any of this as my own orginal work. :3
