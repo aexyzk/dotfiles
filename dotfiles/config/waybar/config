@@ -1,0 +1,118 @@
+{
+    "layer": "top",
+    "height": 35,
+    "spacing": 5,
+    // Choose the order of the modules
+    "modules-left": [
+	"clock",
+	"mpd"
+    ],
+    "modules-center": [
+        "hyprland/workspaces"
+    ],
+    "modules-right": [
+        "custom/updates",
+        "disk",
+        "pulseaudio",
+        "network",
+        "battery",
+        "custom/power"
+    ],
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "on-click": "activate"
+    },
+    "tray": {
+        "icon-size": 21,
+        "spacing": 10
+    },
+    "custom/updates": {
+        "exec": "~/.local/bin/polybar/updates-pacman-aurhelper",
+        "format": "󰏔 {}",
+        "interval": 600
+    },
+    "clock": {
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format": " {:%H:%M  󰃭 %a, %b %d}"
+    },
+    "mpd": {
+        "format": "{artist} - {title}",
+        "format-disconnected": "IPOD - USB - RADIO",
+        "format-stopped": "Stopped",
+        "interval": 2,
+        "consume-icons": {
+            "on": " " // Icon shows only when "consume" is on
+        },
+        "random-icons": {
+            "off": "<span color=\"#f53c3c\"></span> ", // Icon grayed out when "random" is off
+            "on": " "
+        },
+        "repeat-icons": {
+            "on": " "
+        },
+        "single-icons": {
+            "on": "1 "
+        },
+        "state-icons": {
+            "paused": "",
+            "playing": ""
+        },
+        "tooltip-format": "MPD (connected)",
+        "tooltip-format-disconnected": "MPD (disconnected)"
+    },
+    "battery": {
+        "states": {
+            // "good": 95,
+            "warning": 30
+        },
+        "format": "{icon} {capacity}%",
+        "format-charging": "󰂄 {capacity}%",
+        "format-plugged": "󰂄 {capacity}%",
+        // "format-good": "", // An empty format will hide the module
+        "format-full": "󰁹 {capacity}%",
+        "format-icons": [
+            "󰁺",
+            "󰁼",
+            "󰁾",
+            "󰂀",
+            "󰂁",
+            "󰂂"
+        ]
+    },
+    "disk": {
+        "interval": 300,
+        "format": "󰋊 {free}",
+        "path": "/"
+    },
+    "network": {
+        "tooltip": false,
+        "format-wifi": "󰖩 {essid}",
+        "format-disconnected": "󰖪 ",
+        "format-ethernet": "",
+        "on-click": "rofi-wifi-menu"
+    },
+    "pulseaudio": {
+        // "scroll-step": 1, // %, can be a float
+        "format": "󰕾 {volume}%",
+        "format-muted": "󰖁 {volume}%",
+        "on-click": "pavucontrol"
+    },
+    "custom/power": {
+        "format": "󰤆",
+        "on-click": "powermenu"
+    },
+    "custom/media": {
+        "format": "{icon} {}",
+        "return-type": "json",
+        "max-length": 40,
+        "format-icons": {
+            "spotify": "",
+            "default": "🎜"
+        },
+        "escape": true,
+        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
+        // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
+    }
+}
+// vim: ft=jsonc
