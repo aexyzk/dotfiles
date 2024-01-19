@@ -9,13 +9,10 @@ the dotfiles i use for arch linux
  - Terminal: Alacritty
  - Bar:	Waybar
  - Launcher: Rofi
- - Files: Thunar and lf
+ - Files: Thunar
  - Wallpaper: hyprpaper
  - Notifcations: Dunst
  - Music: spotify and mpd/nmpcpp
- - Browser: Librewolf with ericmurpyxyz's theme and Chromium for some school things
- - Editor: Stock Vim and Code - OSS
- - Viewer: mirage for photos and mpv for audio
+ - Browser: Librewolf and Chromium for some school things
+ - Editor: NvChad Nvim
  - Screenshot: grim
-
-credit to ericmurpyxyz, i used alot of his dotfiles. please note, i dont claim any of this as my own orginal work. :3
