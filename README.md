@@ -1,7 +1,7 @@
 # Dotfile
 the dotfiles i use for arch linux
 
-![preview](/example/desktop.png)
+![preview](/desktop.png)
 
 ## Uses/Apps
  - Distro: Arch Linux
