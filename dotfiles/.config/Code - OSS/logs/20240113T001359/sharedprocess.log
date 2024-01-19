@@ -1,0 +1,106 @@
+2024-01-13 00:14:01.437 [info] Started initializing default profile extensions in extensions installation folder. file:///home/aexyzk/.vscode-oss/extensions
+2024-01-13 00:14:01.693 [warning] Failed to create default profile extensions manifest in extensions installation folder. file:///home/aexyzk/.vscode-oss/extensions Unable to create file 'vscode-userdata:/home/aexyzk/.vscode-oss/extensions/extensions.json' that already exists when overwrite flag is not set
+2024-01-13 00:14:01.693 [info] Completed initializing default profile extensions in extensions installation folder. file:///home/aexyzk/.vscode-oss/extensions
+2024-01-13 00:14:57.685 [info] Getting Manifest... shubham-saudolla.lilac
+2024-01-13 00:14:57.817 [info] Installing extension: shubham-saudolla.lilac
+2024-01-13 00:14:58.613 [info] Extension signature verification is not done: shubham-saudolla.lilac
+2024-01-13 00:14:58.641 [info] Extracted extension to file:///home/aexyzk/.vscode-oss/extensions/shubham-saudolla.lilac-1.2.7-universal: shubham-saudolla.lilac
+2024-01-13 00:14:58.645 [info] Renamed to /home/aexyzk/.vscode-oss/extensions/shubham-saudolla.lilac-1.2.7-universal
+2024-01-13 00:14:58.646 [info] Extracting extension completed. shubham-saudolla.lilac
+2024-01-13 00:14:58.656 [info] Extension installed successfully: shubham-saudolla.lilac
+2024-01-13 00:14:58.730 [error] [uncaught exception in sharedProcess]: Error: ENOENT: no such file or directory, stat '/home/aexyzk/.vscode-oss/extensions/extensions.json.vsctmp': EntryNotFound (FileSystemError): Error: ENOENT: no such file or directory, stat '/home/aexyzk/.vscode-oss/extensions/extensions.json.vsctmp'
+    at r.create (/usr/lib/code/out/vs/code/node/sharedProcess/sharedProcessMain.js:51:30056)
+    at a (/usr/lib/code/out/vs/code/node/sharedProcess/sharedProcessMain.js:51:30170)
+    at s.fb (/usr/lib/code/out/vs/code/node/sharedProcess/sharedProcessMain.js:56:36175)
+    at s.stat (/usr/lib/code/out/vs/code/node/sharedProcess/sharedProcessMain.js:56:28621)
+    at async E.stat (/usr/lib/code/out/vs/code/node/sharedProcess/sharedProcessMain.js:56:15732)
+    at async Y.tb (/usr/lib/code/out/vs/code/node/sharedProcess/sharedProcessMain.js:100:111319)
+2024-01-13 00:15:53.040 [info] Getting Manifest... ms-python.python
+2024-01-13 00:15:53.145 [info] Installing extension: ms-python.python
+2024-01-13 00:15:57.691 [info] Extension signature verification is not done: ms-python.python
+2024-01-13 00:15:59.677 [info] Extracted extension to file:///home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal: ms-python.python
+2024-01-13 00:15:59.694 [info] Renamed to /home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal
+2024-01-13 00:15:59.699 [info] Extracting extension completed. ms-python.python
+2024-01-13 00:15:59.711 [info] Extension installed successfully: ms-python.python
+2024-01-13 00:15:59.789 [error] [uncaught exception in sharedProcess]: Error: ENOENT: no such file or directory, stat '/home/aexyzk/.vscode-oss/extensions/extensions.json.vsctmp': EntryNotFound (FileSystemError): Error: ENOENT: no such file or directory, stat '/home/aexyzk/.vscode-oss/extensions/extensions.json.vsctmp'
+    at r.create (/usr/lib/code/out/vs/code/node/sharedProcess/sharedProcessMain.js:51:30056)
+    at a (/usr/lib/code/out/vs/code/node/sharedProcess/sharedProcessMain.js:51:30170)
+    at s.fb (/usr/lib/code/out/vs/code/node/sharedProcess/sharedProcessMain.js:56:36175)
+    at s.stat (/usr/lib/code/out/vs/code/node/sharedProcess/sharedProcessMain.js:56:28621)
+    at async E.stat (/usr/lib/code/out/vs/code/node/sharedProcess/sharedProcessMain.js:56:15732)
+    at async Y.tb (/usr/lib/code/out/vs/code/node/sharedProcess/sharedProcessMain.js:100:111319)
+2024-01-13 00:16:04.344 [info] Getting Manifest... ecmel.vscode-html-css
+2024-01-13 00:16:04.450 [info] Installing extension: ecmel.vscode-html-css
+2024-01-13 00:16:05.136 [info] Extension signature verification is not done: ecmel.vscode-html-css
+2024-01-13 00:16:05.161 [info] Extracted extension to file:///home/aexyzk/.vscode-oss/extensions/ecmel.vscode-html-css-2.0.6-universal: ecmel.vscode-html-css
+2024-01-13 00:16:05.168 [info] Renamed to /home/aexyzk/.vscode-oss/extensions/ecmel.vscode-html-css-2.0.6-universal
+2024-01-13 00:16:05.170 [info] Extracting extension completed. ecmel.vscode-html-css
+2024-01-13 00:16:05.182 [info] Extension installed successfully: ecmel.vscode-html-css
+2024-01-13 00:16:05.252 [error] [uncaught exception in sharedProcess]: Error: ENOENT: no such file or directory, stat '/home/aexyzk/.vscode-oss/extensions/extensions.json.vsctmp': EntryNotFound (FileSystemError): Error: ENOENT: no such file or directory, stat '/home/aexyzk/.vscode-oss/extensions/extensions.json.vsctmp'
+    at r.create (/usr/lib/code/out/vs/code/node/sharedProcess/sharedProcessMain.js:51:30056)
+    at a (/usr/lib/code/out/vs/code/node/sharedProcess/sharedProcessMain.js:51:30170)
+    at s.fb (/usr/lib/code/out/vs/code/node/sharedProcess/sharedProcessMain.js:56:36175)
+    at s.stat (/usr/lib/code/out/vs/code/node/sharedProcess/sharedProcessMain.js:56:28621)
+    at async E.stat (/usr/lib/code/out/vs/code/node/sharedProcess/sharedProcessMain.js:56:15732)
+    at async Y.tb (/usr/lib/code/out/vs/code/node/sharedProcess/sharedProcessMain.js:100:111319)
+2024-01-13 00:16:11.961 [info] Getting Manifest... zaaack.markdown-editor
+2024-01-13 00:16:12.067 [info] Installing extension: zaaack.markdown-editor
+2024-01-13 00:16:13.289 [info] Extension signature verification is not done: zaaack.markdown-editor
+2024-01-13 00:16:13.398 [info] Extracted extension to file:///home/aexyzk/.vscode-oss/extensions/zaaack.markdown-editor-0.1.9-universal: zaaack.markdown-editor
+2024-01-13 00:16:13.408 [info] Renamed to /home/aexyzk/.vscode-oss/extensions/zaaack.markdown-editor-0.1.9-universal
+2024-01-13 00:16:13.410 [info] Extracting extension completed. zaaack.markdown-editor
+2024-01-13 00:16:13.418 [info] Extension installed successfully: zaaack.markdown-editor
+2024-01-13 00:16:13.473 [error] [uncaught exception in sharedProcess]: Error: ENOENT: no such file or directory, stat '/home/aexyzk/.vscode-oss/extensions/extensions.json.vsctmp': EntryNotFound (FileSystemError): Error: ENOENT: no such file or directory, stat '/home/aexyzk/.vscode-oss/extensions/extensions.json.vsctmp'
+    at r.create (/usr/lib/code/out/vs/code/node/sharedProcess/sharedProcessMain.js:51:30056)
+    at a (/usr/lib/code/out/vs/code/node/sharedProcess/sharedProcessMain.js:51:30170)
+    at s.fb (/usr/lib/code/out/vs/code/node/sharedProcess/sharedProcessMain.js:56:36175)
+    at s.stat (/usr/lib/code/out/vs/code/node/sharedProcess/sharedProcessMain.js:56:28621)
+    at async E.stat (/usr/lib/code/out/vs/code/node/sharedProcess/sharedProcessMain.js:56:15732)
+    at async Y.tb (/usr/lib/code/out/vs/code/node/sharedProcess/sharedProcessMain.js:100:111319)
+2024-01-13 00:16:19.668 [info] Getting Manifest... muhammad-sammy.csharp
+2024-01-13 00:16:19.775 [info] Installing extension: muhammad-sammy.csharp
+2024-01-13 00:16:19.960 [info] Getting Manifest... ms-dotnettools.vscode-dotnet-runtime
+2024-01-13 00:16:20.249 [info] Installing extension: ms-dotnettools.vscode-dotnet-runtime muhammad-sammy.csharp
+2024-01-13 00:16:21.516 [info] Extension signature verification is not done: ms-dotnettools.vscode-dotnet-runtime
+2024-01-13 00:16:21.608 [info] Extracted extension to file:///home/aexyzk/.vscode-oss/extensions/ms-dotnettools.vscode-dotnet-runtime-2.0.0-universal: ms-dotnettools.vscode-dotnet-runtime
+2024-01-13 00:16:21.614 [info] Renamed to /home/aexyzk/.vscode-oss/extensions/ms-dotnettools.vscode-dotnet-runtime-2.0.0-universal
+2024-01-13 00:16:21.616 [info] Extracting extension completed. ms-dotnettools.vscode-dotnet-runtime
+2024-01-13 00:16:21.700 [error] [uncaught exception in sharedProcess]: Error: ENOENT: no such file or directory, stat '/home/aexyzk/.vscode-oss/extensions/extensions.json.vsctmp': EntryNotFound (FileSystemError): Error: ENOENT: no such file or directory, stat '/home/aexyzk/.vscode-oss/extensions/extensions.json.vsctmp'
+    at r.create (/usr/lib/code/out/vs/code/node/sharedProcess/sharedProcessMain.js:51:30056)
+    at a (/usr/lib/code/out/vs/code/node/sharedProcess/sharedProcessMain.js:51:30170)
+    at s.fb (/usr/lib/code/out/vs/code/node/sharedProcess/sharedProcessMain.js:56:36175)
+    at s.stat (/usr/lib/code/out/vs/code/node/sharedProcess/sharedProcessMain.js:56:28621)
+    at async E.stat (/usr/lib/code/out/vs/code/node/sharedProcess/sharedProcessMain.js:56:15732)
+    at async Y.tb (/usr/lib/code/out/vs/code/node/sharedProcess/sharedProcessMain.js:100:111319)
+2024-01-13 00:16:28.995 [info] Extension signature verification is not done: muhammad-sammy.csharp
+2024-01-13 00:16:30.173 [info] Extracted extension to file:///home/aexyzk/.vscode-oss/extensions/muhammad-sammy.csharp-2.15.30-universal: muhammad-sammy.csharp
+2024-01-13 00:16:30.189 [info] Renamed to /home/aexyzk/.vscode-oss/extensions/muhammad-sammy.csharp-2.15.30-universal
+2024-01-13 00:16:30.220 [warning] [csharp]: Couldn't find message for key configuration.razor.server.trace.
+2024-01-13 00:16:30.222 [info] Extracting extension completed. muhammad-sammy.csharp
+2024-01-13 00:16:30.243 [info] Extension installed successfully: ms-dotnettools.vscode-dotnet-runtime
+2024-01-13 00:16:30.244 [info] Extension installed successfully: muhammad-sammy.csharp
+2024-01-13 00:16:30.308 [error] [uncaught exception in sharedProcess]: Error: ENOENT: no such file or directory, stat '/home/aexyzk/.vscode-oss/extensions/extensions.json.vsctmp': EntryNotFound (FileSystemError): Error: ENOENT: no such file or directory, stat '/home/aexyzk/.vscode-oss/extensions/extensions.json.vsctmp'
+    at r.create (/usr/lib/code/out/vs/code/node/sharedProcess/sharedProcessMain.js:51:30056)
+    at a (/usr/lib/code/out/vs/code/node/sharedProcess/sharedProcessMain.js:51:30170)
+    at s.fb (/usr/lib/code/out/vs/code/node/sharedProcess/sharedProcessMain.js:56:36175)
+    at s.stat (/usr/lib/code/out/vs/code/node/sharedProcess/sharedProcessMain.js:56:28621)
+    at async E.stat (/usr/lib/code/out/vs/code/node/sharedProcess/sharedProcessMain.js:56:15732)
+    at async Y.tb (/usr/lib/code/out/vs/code/node/sharedProcess/sharedProcessMain.js:100:111319)
+2024-01-13 00:17:06.472 [info] Getting Manifest... sumneko.lua
+2024-01-13 00:17:06.595 [info] Installing extension: sumneko.lua
+2024-01-13 00:17:06.680 [warning] [csharp]: Couldn't find message for key configuration.razor.server.trace.
+2024-01-13 00:17:06.754 [warning] [csharp]: Couldn't find message for key configuration.razor.server.trace.
+2024-01-13 00:17:06.822 [warning] [csharp]: Couldn't find message for key configuration.razor.server.trace.
+2024-01-13 00:17:33.716 [info] Extension signature verification is not done: sumneko.lua
+2024-01-13 00:17:34.669 [info] Extracted extension to file:///home/aexyzk/.vscode-oss/extensions/sumneko.lua-3.7.4-linux-x64: sumneko.lua
+2024-01-13 00:17:34.684 [info] Renamed to /home/aexyzk/.vscode-oss/extensions/sumneko.lua-3.7.4-linux-x64
+2024-01-13 00:17:34.698 [info] Extracting extension completed. sumneko.lua
+2024-01-13 00:17:34.707 [info] Extension installed successfully: sumneko.lua
+2024-01-13 00:17:34.794 [error] [uncaught exception in sharedProcess]: Error: ENOENT: no such file or directory, stat '/home/aexyzk/.vscode-oss/extensions/extensions.json.vsctmp': EntryNotFound (FileSystemError): Error: ENOENT: no such file or directory, stat '/home/aexyzk/.vscode-oss/extensions/extensions.json.vsctmp'
+    at r.create (/usr/lib/code/out/vs/code/node/sharedProcess/sharedProcessMain.js:51:30056)
+    at a (/usr/lib/code/out/vs/code/node/sharedProcess/sharedProcessMain.js:51:30170)
+    at s.fb (/usr/lib/code/out/vs/code/node/sharedProcess/sharedProcessMain.js:56:36175)
+    at s.stat (/usr/lib/code/out/vs/code/node/sharedProcess/sharedProcessMain.js:56:28621)
+    at async E.stat (/usr/lib/code/out/vs/code/node/sharedProcess/sharedProcessMain.js:56:15732)
+    at async Y.tb (/usr/lib/code/out/vs/code/node/sharedProcess/sharedProcessMain.js:100:111319)
+2024-01-13 00:19:03.538 [warning] [csharp]: Couldn't find message for key configuration.razor.server.trace.

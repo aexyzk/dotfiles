@@ -1,0 +1,44 @@
+2024-01-18 11:18:12.833 [info] Default formatter is set to null for workspace /home/aexyzk/messagetransmitter
+2024-01-18 11:18:12.833 [info] Test server listening.
+2024-01-18 11:18:12.846 [error] [
+  'Failed to activate a workspace, Class name = g, completed in 34ms, has a falsy return value, Arg 1: <Uri:/home/aexyzk/messagetransmitter/server.py>, Return Value: undefined',
+  [Error: Extension 'ms-python.python' CANNOT use API proposal: testObserver.
+  Its package.json#enabledApiProposals-property declares:  but NOT testObserver.
+   The missing proposal MUST be added and you must start in extension development mode or use the following command line switch: --enable-proposed-api ms-python.python
+  	at v (/usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:138:48007)
+  	at get testResults [as testResults] (/usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:158:23805)
+  	at w.activate (/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/out/client/extension.js:2:795716)
+  	at /home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/out/client/extension.js:2:2455
+  	at Array.map (<anonymous>)
+  	at g.activateWorkspace (/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/out/client/extension.js:2:2445)]
+]
+2024-01-18 11:18:12.846 [error] Failure during activation. [Error: Extension 'ms-python.python' CANNOT use API proposal: testObserver.
+Its package.json#enabledApiProposals-property declares:  but NOT testObserver.
+ The missing proposal MUST be added and you must start in extension development mode or use the following command line switch: --enable-proposed-api ms-python.python
+	at v (/usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:138:48007)
+	at get testResults [as testResults] (/usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:158:23805)
+	at w.activate (/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/out/client/extension.js:2:795716)
+	at /home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/out/client/extension.js:2:2455
+	at Array.map (<anonymous>)
+	at g.activateWorkspace (/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/out/client/extension.js:2:2445)]
+2024-01-18 11:18:12.846 [error] sendStartupTelemetry() failed. [Error: Extension 'ms-python.python' CANNOT use API proposal: testObserver.
+Its package.json#enabledApiProposals-property declares:  but NOT testObserver.
+ The missing proposal MUST be added and you must start in extension development mode or use the following command line switch: --enable-proposed-api ms-python.python
+	at v (/usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:138:48007)
+	at get testResults [as testResults] (/usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:158:23805)
+	at w.activate (/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/out/client/extension.js:2:795716)
+	at /home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/out/client/extension.js:2:2455
+	at Array.map (<anonymous>)
+	at g.activateWorkspace (/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/out/client/extension.js:2:2445)]
+2024-01-18 11:18:12.847 [warning] Retry failed, storage update failed for key PYTHON_GLOBAL_STORAGE_KEYS
+2024-01-18 11:18:12.847 [warning] Retry failed, storage update failed for key PYTHON_GLOBAL_STORAGE_KEYS
+2024-01-18 11:18:12.847 [warning] Retry failed, storage update failed for key PYTHON_WORKSPACE_STORAGE_KEYS
+2024-01-18 11:18:12.847 [warning] Retry failed, storage update failed for key PYTHON_WORKSPACE_STORAGE_KEYS
+2024-01-18 11:18:12.847 [warning] Retry failed, storage update failed for key PYTHON_WORKSPACE_STORAGE_KEYS
+2024-01-18 11:18:12.849 [info] Python interpreter path: /bin/python
+2024-01-18 11:18:12.858 [warning] Retry failed, storage update failed for key PYTHON_GLOBAL_STORAGE_KEYS
+2024-01-18 11:18:12.882 [info] > /bin/python -I ~/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/get_output_via_markers.py ~/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/interpreterInfo.py
+2024-01-18 11:18:13.411 [info] Starting Jedi language server for messagetransmitter.
+2024-01-18 11:18:35.760 [info] Discover tests for workspace name: messagetransmitter - uri: /home/aexyzk/messagetransmitter/server.py
+2024-01-18 11:18:58.336 [info] Discover tests for workspace name: messagetransmitter - uri: /home/aexyzk/messagetransmitter/server.py
+2024-01-18 11:20:55.180 [info] Discover tests for workspace name: messagetransmitter - uri: /home/aexyzk/messagetransmitter/server.py

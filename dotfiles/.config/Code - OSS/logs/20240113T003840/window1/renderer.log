@@ -1,0 +1,13 @@
+2024-01-13 00:38:41.157 [info] Initial editor state {"filesToOpenOrCreate":[{"fileUri":{"$mid":1,"path":"/home/aexyzk/.config/alacritty/alacritty.toml","scheme":"file"},"type":1,"exists":true,"options":{}}],"filesToDiff":[],"filesToMerge":[]}
+2024-01-13 00:38:41.552 [info] Started local extension host with pid 1253.
+2024-01-13 00:38:41.635 [error] Extension 'ms-python.python CANNOT USE these API proposals 'contribEditorContentMenu, quickPickSortByLabel, testObserver, quickPickItemTooltip, saveEditor, terminalDataWriteEvent, terminalExecuteCommandEvent'. You MUST start in extension development mode or use the --enable-proposed-api command line flag
+2024-01-13 00:38:41.708 [error] [ms-python.python]: editor/content is a proposed menu identifier. It requires 'package.json#enabledApiProposals: ["contribEditorContentMenu"]' and is only available when running out of dev or with the following command line switch: --enable-proposed-api ms-python.python
+2024-01-13 00:38:44.727 [warning] [csharp]: Couldn't find message for key configuration.razor.server.trace.
+2024-01-13 00:38:44.818 [info] [perf] Render performance baseline is 57ms
+2024-01-13 00:39:13.726 [warning] [csharp]: Couldn't find message for key configuration.razor.server.trace.
+2024-01-13 00:39:13.758 [error] [ms-python.python]: editor/content is a proposed menu identifier. It requires 'package.json#enabledApiProposals: ["contribEditorContentMenu"]' and is only available when running out of dev or with the following command line switch: --enable-proposed-api ms-python.python
+2024-01-13 01:04:51.362 [info] Started local extension host with pid 7073.
+2024-01-13 01:04:51.406 [error] Extension 'ms-python.python CANNOT USE these API proposals 'contribEditorContentMenu, quickPickSortByLabel, testObserver, quickPickItemTooltip, saveEditor, terminalDataWriteEvent, terminalExecuteCommandEvent'. You MUST start in extension development mode or use the --enable-proposed-api command line flag
+2024-01-13 01:04:51.467 [error] [ms-python.python]: editor/content is a proposed menu identifier. It requires 'package.json#enabledApiProposals: ["contribEditorContentMenu"]' and is only available when running out of dev or with the following command line switch: --enable-proposed-api ms-python.python
+2024-01-13 01:04:54.504 [warning] [csharp]: Couldn't find message for key configuration.razor.server.trace.
+2024-01-13 01:04:54.703 [info] [perf] Render performance baseline is 31ms

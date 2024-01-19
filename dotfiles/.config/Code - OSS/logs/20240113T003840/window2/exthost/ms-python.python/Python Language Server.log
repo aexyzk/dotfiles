@@ -1,0 +1,726 @@
+2024-01-13 01:01:27.251 [info] ERROR:pygls.protocol:Failed to handle request 1 textDocument/documentSymbol DocumentSymbolParams(text_document=TextDocumentIdentifier(uri='file:///home/aexyzk/verlauf/verlauf/__main__.py'), work_done_token=None, partial_result_token=None)
+Traceback (most recent call last):
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/pygls/protocol.py", line 340, in _handle_request
+    self._execute_request(msg_id, handler, params)
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/pygls/protocol.py", line 264, in _execute_request
+    self._send_response(msg_id, handler(params))
+                                ^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi_language_server/server.py", line 435, in document_symbol
+    jedi_script = jedi_utils.script(server.project, document)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi_language_server/jedi_utils.py", line 118, in script
+    return Script(code=document.source, path=document.path, project=project)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/__init__.py", line 119, in __init__
+    self._inference_state = InferenceState(
+                            ^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/inference/__init__.py", line 87, in __init__
+    environment = project.get_environment()
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/project.py", line 245, in get_environment
+    self._environment = create_environment(self._environment_path, safe=False)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/environment.py", line 367, in create_environment
+    return Environment(_get_executable_path(path, safe=safe), env_vars=env_vars)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/environment.py", line 380, in _get_executable_path
+    raise InvalidPythonEnvironment("%s seems to be missing." % python)
+jedi.api.environment.InvalidPythonEnvironment: bin/python seems to be missing.
+
+2024-01-13 01:01:27.273 [info] [Error - 1:01:27 AM] Request textDocument/documentSymbol failed.
+2024-01-13 01:01:27.273 [info]   Message: jedi.api.environment.InvalidPythonEnvironment: bin/python seems to be missing.
+  Code: -32602 
+{'traceback': ['  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/pygls/protocol.py", line 340, in _handle_request\n    self._execute_request(msg_id, handler, params)\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/pygls/protocol.py", line 264, in _execute_request\n    self._send_response(msg_id, handler(params))\n                                ^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi_language_server/server.py", line 435, in document_symbol\n    jedi_script = jedi_utils.script(server.project, document)\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi_language_server/jedi_utils.py", line 118, in script\n    return Script(code=document.source, path=document.path, project=project)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/__init__.py", line 119, in __init__\n    self._inference_state = InferenceState(\n                            ^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/inference/__init__.py", line 87, in __init__\n    environment = project.get_environment()\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/project.py", line 245, in get_environment\n    self._environment = create_environment(self._environment_path, safe=False)\n                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/environment.py", line 367, in create_environment\n    return Environment(_get_executable_path(path, safe=safe), env_vars=env_vars)\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/environment.py", line 380, in _get_executable_path\n    raise InvalidPythonEnvironment("%s seems to be missing." % python)\n']}
+2024-01-13 01:01:27.274 [info] ERROR:pygls.protocol:Failed to handle request 2 textDocument/codeAction CodeActionParams(text_document=TextDocumentIdentifier(uri='file:///home/aexyzk/verlauf/verlauf/__main__.py'), range=13:72-13:72, context=CodeActionContext(diagnostics=[], only=None, trigger_kind=<CodeActionTriggerKind.Automatic: 2>), work_done_token=None, partial_result_token=None)
+Traceback (most recent call last):
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/pygls/protocol.py", line 340, in _handle_request
+    self._execute_request(msg_id, handler, params)
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/pygls/protocol.py", line 264, in _execute_request
+    self._send_response(msg_id, handler(params))
+                                ^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi_language_server/server.py", line 549, in code_action
+    jedi_script = jedi_utils.script(server.project, document)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi_language_server/jedi_utils.py", line 118, in script
+    return Script(code=document.source, path=document.path, project=project)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/__init__.py", line 119, in __init__
+    self._inference_state = InferenceState(
+                            ^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/inference/__init__.py", line 87, in __init__
+    environment = project.get_environment()
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/project.py", line 245, in get_environment
+    self._environment = create_environment(self._environment_path, safe=False)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/environment.py", line 367, in create_environment
+    return Environment(_get_executable_path(path, safe=safe), env_vars=env_vars)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/environment.py", line 380, in _get_executable_path
+    raise InvalidPythonEnvironment("%s seems to be missing." % python)
+jedi.api.environment.InvalidPythonEnvironment: bin/python seems to be missing.
+
+2024-01-13 01:01:27.275 [info] [Error - 1:01:27 AM] Request textDocument/codeAction failed.
+2024-01-13 01:01:27.275 [info]   Message: jedi.api.environment.InvalidPythonEnvironment: bin/python seems to be missing.
+  Code: -32602 
+{'traceback': ['  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/pygls/protocol.py", line 340, in _handle_request\n    self._execute_request(msg_id, handler, params)\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/pygls/protocol.py", line 264, in _execute_request\n    self._send_response(msg_id, handler(params))\n                                ^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi_language_server/server.py", line 549, in code_action\n    jedi_script = jedi_utils.script(server.project, document)\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi_language_server/jedi_utils.py", line 118, in script\n    return Script(code=document.source, path=document.path, project=project)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/__init__.py", line 119, in __init__\n    self._inference_state = InferenceState(\n                            ^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/inference/__init__.py", line 87, in __init__\n    environment = project.get_environment()\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/project.py", line 245, in get_environment\n    self._environment = create_environment(self._environment_path, safe=False)\n                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/environment.py", line 367, in create_environment\n    return Environment(_get_executable_path(path, safe=safe), env_vars=env_vars)\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/environment.py", line 380, in _get_executable_path\n    raise InvalidPythonEnvironment("%s seems to be missing." % python)\n']}
+2024-01-13 01:01:55.572 [info] ERROR:pygls.protocol:Failed to handle request 3 textDocument/codeAction CodeActionParams(text_document=TextDocumentIdentifier(uri='file:///home/aexyzk/verlauf/verlauf/hex.py'), range=0:0-0:0, context=CodeActionContext(diagnostics=[], only=None, trigger_kind=<CodeActionTriggerKind.Automatic: 2>), work_done_token=None, partial_result_token=None)
+Traceback (most recent call last):
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/pygls/protocol.py", line 340, in _handle_request
+    self._execute_request(msg_id, handler, params)
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/pygls/protocol.py", line 264, in _execute_request
+    self._send_response(msg_id, handler(params))
+                                ^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi_language_server/server.py", line 549, in code_action
+    jedi_script = jedi_utils.script(server.project, document)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi_language_server/jedi_utils.py", line 118, in script
+    return Script(code=document.source, path=document.path, project=project)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/__init__.py", line 119, in __init__
+    self._inference_state = InferenceState(
+                            ^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/inference/__init__.py", line 87, in __init__
+    environment = project.get_environment()
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/project.py", line 245, in get_environment
+    self._environment = create_environment(self._environment_path, safe=False)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/environment.py", line 367, in create_environment
+    return Environment(_get_executable_path(path, safe=safe), env_vars=env_vars)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/environment.py", line 380, in _get_executable_path
+    raise InvalidPythonEnvironment("%s seems to be missing." % python)
+jedi.api.environment.InvalidPythonEnvironment: bin/python seems to be missing.
+
+2024-01-13 01:01:55.574 [info] [Error - 1:01:55 AM] Request textDocument/codeAction failed.
+2024-01-13 01:01:55.574 [info]   Message: jedi.api.environment.InvalidPythonEnvironment: bin/python seems to be missing.
+  Code: -32602 
+{'traceback': ['  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/pygls/protocol.py", line 340, in _handle_request\n    self._execute_request(msg_id, handler, params)\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/pygls/protocol.py", line 264, in _execute_request\n    self._send_response(msg_id, handler(params))\n                                ^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi_language_server/server.py", line 549, in code_action\n    jedi_script = jedi_utils.script(server.project, document)\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi_language_server/jedi_utils.py", line 118, in script\n    return Script(code=document.source, path=document.path, project=project)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/__init__.py", line 119, in __init__\n    self._inference_state = InferenceState(\n                            ^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/inference/__init__.py", line 87, in __init__\n    environment = project.get_environment()\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/project.py", line 245, in get_environment\n    self._environment = create_environment(self._environment_path, safe=False)\n                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/environment.py", line 367, in create_environment\n    return Environment(_get_executable_path(path, safe=safe), env_vars=env_vars)\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/environment.py", line 380, in _get_executable_path\n    raise InvalidPythonEnvironment("%s seems to be missing." % python)\n']}
+2024-01-13 01:01:55.575 [info] ERROR:pygls.protocol:Failed to handle request 4 textDocument/documentSymbol DocumentSymbolParams(text_document=TextDocumentIdentifier(uri='file:///home/aexyzk/verlauf/verlauf/hex.py'), work_done_token=None, partial_result_token=None)
+Traceback (most recent call last):
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/pygls/protocol.py", line 340, in _handle_request
+    self._execute_request(msg_id, handler, params)
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/pygls/protocol.py", line 264, in _execute_request
+    self._send_response(msg_id, handler(params))
+                                ^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi_language_server/server.py", line 435, in document_symbol
+    jedi_script = jedi_utils.script(server.project, document)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi_language_server/jedi_utils.py", line 118, in script
+    return Script(code=document.source, path=document.path, project=project)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/__init__.py", line 119, in __init__
+    self._inference_state = InferenceState(
+                            ^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/inference/__init__.py", line 87, in __init__
+    environment = project.get_environment()
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/project.py", line 245, in get_environment
+    self._environment = create_environment(self._environment_path, safe=False)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/environment.py", line 367, in create_environment
+    return Environment(_get_executable_path(path, safe=safe), env_vars=env_vars)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/environment.py", line 380, in _get_executable_path
+    raise InvalidPythonEnvironment("%s seems to be missing." % python)
+jedi.api.environment.InvalidPythonEnvironment: bin/python seems to be missing.
+
+2024-01-13 01:01:55.575 [info] [Error - 1:01:55 AM] Request textDocument/documentSymbol failed.
+2024-01-13 01:01:55.575 [info]   Message: jedi.api.environment.InvalidPythonEnvironment: bin/python seems to be missing.
+  Code: -32602 
+{'traceback': ['  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/pygls/protocol.py", line 340, in _handle_request\n    self._execute_request(msg_id, handler, params)\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/pygls/protocol.py", line 264, in _execute_request\n    self._send_response(msg_id, handler(params))\n                                ^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi_language_server/server.py", line 435, in document_symbol\n    jedi_script = jedi_utils.script(server.project, document)\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi_language_server/jedi_utils.py", line 118, in script\n    return Script(code=document.source, path=document.path, project=project)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/__init__.py", line 119, in __init__\n    self._inference_state = InferenceState(\n                            ^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/inference/__init__.py", line 87, in __init__\n    environment = project.get_environment()\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/project.py", line 245, in get_environment\n    self._environment = create_environment(self._environment_path, safe=False)\n                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/environment.py", line 367, in create_environment\n    return Environment(_get_executable_path(path, safe=safe), env_vars=env_vars)\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/environment.py", line 380, in _get_executable_path\n    raise InvalidPythonEnvironment("%s seems to be missing." % python)\n']}
+2024-01-13 01:01:56.029 [info] ERROR:pygls.protocol:Failed to handle request 5 textDocument/codeAction CodeActionParams(text_document=TextDocumentIdentifier(uri='file:///home/aexyzk/verlauf/verlauf/gradients.py'), range=0:0-0:0, context=CodeActionContext(diagnostics=[], only=None, trigger_kind=<CodeActionTriggerKind.Automatic: 2>), work_done_token=None, partial_result_token=None)
+Traceback (most recent call last):
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/pygls/protocol.py", line 340, in _handle_request
+    self._execute_request(msg_id, handler, params)
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/pygls/protocol.py", line 264, in _execute_request
+    self._send_response(msg_id, handler(params))
+                                ^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi_language_server/server.py", line 549, in code_action
+    jedi_script = jedi_utils.script(server.project, document)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi_language_server/jedi_utils.py", line 118, in script
+    return Script(code=document.source, path=document.path, project=project)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/__init__.py", line 119, in __init__
+    self._inference_state = InferenceState(
+                            ^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/inference/__init__.py", line 87, in __init__
+    environment = project.get_environment()
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/project.py", line 245, in get_environment
+    self._environment = create_environment(self._environment_path, safe=False)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/environment.py", line 367, in create_environment
+    return Environment(_get_executable_path(path, safe=safe), env_vars=env_vars)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/environment.py", line 380, in _get_executable_path
+    raise InvalidPythonEnvironment("%s seems to be missing." % python)
+jedi.api.environment.InvalidPythonEnvironment: bin/python seems to be missing.
+
+2024-01-13 01:01:56.030 [info] [Error - 1:01:56 AM] Request textDocument/codeAction failed.
+2024-01-13 01:01:56.030 [info]   Message: jedi.api.environment.InvalidPythonEnvironment: bin/python seems to be missing.
+  Code: -32602 
+{'traceback': ['  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/pygls/protocol.py", line 340, in _handle_request\n    self._execute_request(msg_id, handler, params)\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/pygls/protocol.py", line 264, in _execute_request\n    self._send_response(msg_id, handler(params))\n                                ^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi_language_server/server.py", line 549, in code_action\n    jedi_script = jedi_utils.script(server.project, document)\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi_language_server/jedi_utils.py", line 118, in script\n    return Script(code=document.source, path=document.path, project=project)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/__init__.py", line 119, in __init__\n    self._inference_state = InferenceState(\n                            ^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/inference/__init__.py", line 87, in __init__\n    environment = project.get_environment()\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/project.py", line 245, in get_environment\n    self._environment = create_environment(self._environment_path, safe=False)\n                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/environment.py", line 367, in create_environment\n    return Environment(_get_executable_path(path, safe=safe), env_vars=env_vars)\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/environment.py", line 380, in _get_executable_path\n    raise InvalidPythonEnvironment("%s seems to be missing." % python)\n']}
+2024-01-13 01:01:56.030 [info] ERROR:pygls.protocol:Failed to handle request 6 textDocument/documentSymbol DocumentSymbolParams(text_document=TextDocumentIdentifier(uri='file:///home/aexyzk/verlauf/verlauf/gradients.py'), work_done_token=None, partial_result_token=None)
+Traceback (most recent call last):
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/pygls/protocol.py", line 340, in _handle_request
+    self._execute_request(msg_id, handler, params)
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/pygls/protocol.py", line 264, in _execute_request
+    self._send_response(msg_id, handler(params))
+                                ^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi_language_server/server.py", line 435, in document_symbol
+    jedi_script = jedi_utils.script(server.project, document)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi_language_server/jedi_utils.py", line 118, in script
+    return Script(code=document.source, path=document.path, project=project)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/__init__.py", line 119, in __init__
+    self._inference_state = InferenceState(
+                            ^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/inference/__init__.py", line 87, in __init__
+    environment = project.get_environment()
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/project.py", line 245, in get_environment
+    self._environment = create_environment(self._environment_path, safe=False)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/environment.py", line 367, in create_environment
+    return Environment(_get_executable_path(path, safe=safe), env_vars=env_vars)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/environment.py", line 380, in _get_executable_path
+    raise InvalidPythonEnvironment("%s seems to be missing." % python)
+jedi.api.environment.InvalidPythonEnvironment: bin/python seems to be missing.
+
+2024-01-13 01:01:56.031 [info] [Error - 1:01:56 AM] Request textDocument/documentSymbol failed.
+2024-01-13 01:01:56.031 [info]   Message: jedi.api.environment.InvalidPythonEnvironment: bin/python seems to be missing.
+  Code: -32602 
+{'traceback': ['  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/pygls/protocol.py", line 340, in _handle_request\n    self._execute_request(msg_id, handler, params)\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/pygls/protocol.py", line 264, in _execute_request\n    self._send_response(msg_id, handler(params))\n                                ^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi_language_server/server.py", line 435, in document_symbol\n    jedi_script = jedi_utils.script(server.project, document)\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi_language_server/jedi_utils.py", line 118, in script\n    return Script(code=document.source, path=document.path, project=project)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/__init__.py", line 119, in __init__\n    self._inference_state = InferenceState(\n                            ^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/inference/__init__.py", line 87, in __init__\n    environment = project.get_environment()\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/project.py", line 245, in get_environment\n    self._environment = create_environment(self._environment_path, safe=False)\n                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/environment.py", line 367, in create_environment\n    return Environment(_get_executable_path(path, safe=safe), env_vars=env_vars)\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/environment.py", line 380, in _get_executable_path\n    raise InvalidPythonEnvironment("%s seems to be missing." % python)\n']}
+2024-01-13 01:02:02.810 [info] ERROR:pygls.protocol:Failed to handle request 7 textDocument/documentHighlight DocumentHighlightParams(text_document=TextDocumentIdentifier(uri='file:///home/aexyzk/verlauf/verlauf/gradients.py'), position=2:10, work_done_token=None, partial_result_token=None)
+Traceback (most recent call last):
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/pygls/protocol.py", line 340, in _handle_request
+    self._execute_request(msg_id, handler, params)
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/pygls/protocol.py", line 264, in _execute_request
+    self._send_response(msg_id, handler(params))
+                                ^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi_language_server/server.py", line 362, in highlight
+    jedi_script = jedi_utils.script(server.project, document)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi_language_server/jedi_utils.py", line 118, in script
+    return Script(code=document.source, path=document.path, project=project)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/__init__.py", line 119, in __init__
+    self._inference_state = InferenceState(
+                            ^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/inference/__init__.py", line 87, in __init__
+    environment = project.get_environment()
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/project.py", line 245, in get_environment
+    self._environment = create_environment(self._environment_path, safe=False)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/environment.py", line 367, in create_environment
+    return Environment(_get_executable_path(path, safe=safe), env_vars=env_vars)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/environment.py", line 380, in _get_executable_path
+    raise InvalidPythonEnvironment("%s seems to be missing." % python)
+jedi.api.environment.InvalidPythonEnvironment: bin/python seems to be missing.
+
+2024-01-13 01:02:02.812 [info] [Error - 1:02:02 AM] Request textDocument/documentHighlight failed.
+2024-01-13 01:02:02.812 [info]   Message: jedi.api.environment.InvalidPythonEnvironment: bin/python seems to be missing.
+  Code: -32602 
+{'traceback': ['  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/pygls/protocol.py", line 340, in _handle_request\n    self._execute_request(msg_id, handler, params)\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/pygls/protocol.py", line 264, in _execute_request\n    self._send_response(msg_id, handler(params))\n                                ^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi_language_server/server.py", line 362, in highlight\n    jedi_script = jedi_utils.script(server.project, document)\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi_language_server/jedi_utils.py", line 118, in script\n    return Script(code=document.source, path=document.path, project=project)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/__init__.py", line 119, in __init__\n    self._inference_state = InferenceState(\n                            ^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/inference/__init__.py", line 87, in __init__\n    environment = project.get_environment()\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/project.py", line 245, in get_environment\n    self._environment = create_environment(self._environment_path, safe=False)\n                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/environment.py", line 367, in create_environment\n    return Environment(_get_executable_path(path, safe=safe), env_vars=env_vars)\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/environment.py", line 380, in _get_executable_path\n    raise InvalidPythonEnvironment("%s seems to be missing." % python)\n']}
+2024-01-13 01:02:03.174 [info] ERROR:pygls.protocol:Failed to handle request 8 textDocument/codeAction CodeActionParams(text_document=TextDocumentIdentifier(uri='file:///home/aexyzk/verlauf/verlauf/gradients.py'), range=2:7-2:15, context=CodeActionContext(diagnostics=[], only=None, trigger_kind=<CodeActionTriggerKind.Automatic: 2>), work_done_token=None, partial_result_token=None)
+Traceback (most recent call last):
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/pygls/protocol.py", line 340, in _handle_request
+    self._execute_request(msg_id, handler, params)
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/pygls/protocol.py", line 264, in _execute_request
+    self._send_response(msg_id, handler(params))
+                                ^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi_language_server/server.py", line 549, in code_action
+    jedi_script = jedi_utils.script(server.project, document)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi_language_server/jedi_utils.py", line 118, in script
+    return Script(code=document.source, path=document.path, project=project)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/__init__.py", line 119, in __init__
+    self._inference_state = InferenceState(
+                            ^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/inference/__init__.py", line 87, in __init__
+    environment = project.get_environment()
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/project.py", line 245, in get_environment
+    self._environment = create_environment(self._environment_path, safe=False)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/environment.py", line 367, in create_environment
+    return Environment(_get_executable_path(path, safe=safe), env_vars=env_vars)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/environment.py", line 380, in _get_executable_path
+    raise InvalidPythonEnvironment("%s seems to be missing." % python)
+jedi.api.environment.InvalidPythonEnvironment: bin/python seems to be missing.
+
+2024-01-13 01:02:03.174 [info] [Error - 1:02:03 AM] Request textDocument/codeAction failed.
+2024-01-13 01:02:03.175 [info]   Message: jedi.api.environment.InvalidPythonEnvironment: bin/python seems to be missing.
+  Code: -32602 
+{'traceback': ['  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/pygls/protocol.py", line 340, in _handle_request\n    self._execute_request(msg_id, handler, params)\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/pygls/protocol.py", line 264, in _execute_request\n    self._send_response(msg_id, handler(params))\n                                ^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi_language_server/server.py", line 549, in code_action\n    jedi_script = jedi_utils.script(server.project, document)\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi_language_server/jedi_utils.py", line 118, in script\n    return Script(code=document.source, path=document.path, project=project)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/__init__.py", line 119, in __init__\n    self._inference_state = InferenceState(\n                            ^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/inference/__init__.py", line 87, in __init__\n    environment = project.get_environment()\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/project.py", line 245, in get_environment\n    self._environment = create_environment(self._environment_path, safe=False)\n                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/environment.py", line 367, in create_environment\n    return Environment(_get_executable_path(path, safe=safe), env_vars=env_vars)\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/environment.py", line 380, in _get_executable_path\n    raise InvalidPythonEnvironment("%s seems to be missing." % python)\n']}
+2024-01-13 01:02:03.905 [info] ERROR:pygls.protocol:Failed to handle request 9 textDocument/definition DefinitionParams(text_document=TextDocumentIdentifier(uri='file:///home/aexyzk/verlauf/verlauf/gradients.py'), position=27:65, work_done_token=None, partial_result_token=None)
+Traceback (most recent call last):
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/pygls/protocol.py", line 340, in _handle_request
+    self._execute_request(msg_id, handler, params)
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/pygls/protocol.py", line 264, in _execute_request
+    self._send_response(msg_id, handler(params))
+                                ^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi_language_server/server.py", line 314, in definition
+    jedi_script = jedi_utils.script(server.project, document)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi_language_server/jedi_utils.py", line 118, in script
+    return Script(code=document.source, path=document.path, project=project)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/__init__.py", line 119, in __init__
+    self._inference_state = InferenceState(
+                            ^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/inference/__init__.py", line 87, in __init__
+    environment = project.get_environment()
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/project.py", line 245, in get_environment
+    self._environment = create_environment(self._environment_path, safe=False)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/environment.py", line 367, in create_environment
+    return Environment(_get_executable_path(path, safe=safe), env_vars=env_vars)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/environment.py", line 380, in _get_executable_path
+    raise InvalidPythonEnvironment("%s seems to be missing." % python)
+jedi.api.environment.InvalidPythonEnvironment: bin/python seems to be missing.
+
+2024-01-13 01:02:03.906 [info] [Error - 1:02:03 AM] Request textDocument/definition failed.
+2024-01-13 01:02:03.906 [info]   Message: jedi.api.environment.InvalidPythonEnvironment: bin/python seems to be missing.
+  Code: -32602 
+{'traceback': ['  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/pygls/protocol.py", line 340, in _handle_request\n    self._execute_request(msg_id, handler, params)\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/pygls/protocol.py", line 264, in _execute_request\n    self._send_response(msg_id, handler(params))\n                                ^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi_language_server/server.py", line 314, in definition\n    jedi_script = jedi_utils.script(server.project, document)\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi_language_server/jedi_utils.py", line 118, in script\n    return Script(code=document.source, path=document.path, project=project)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/__init__.py", line 119, in __init__\n    self._inference_state = InferenceState(\n                            ^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/inference/__init__.py", line 87, in __init__\n    environment = project.get_environment()\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/project.py", line 245, in get_environment\n    self._environment = create_environment(self._environment_path, safe=False)\n                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/environment.py", line 367, in create_environment\n    return Environment(_get_executable_path(path, safe=safe), env_vars=env_vars)\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/environment.py", line 380, in _get_executable_path\n    raise InvalidPythonEnvironment("%s seems to be missing." % python)\n']}
+2024-01-13 01:02:13.315 [info] ERROR:pygls.protocol:Failed to handle request 10 textDocument/documentHighlight DocumentHighlightParams(text_document=TextDocumentIdentifier(uri='file:///home/aexyzk/verlauf/verlauf/utils.py'), position=0:0, work_done_token=None, partial_result_token=None)
+Traceback (most recent call last):
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/pygls/protocol.py", line 340, in _handle_request
+    self._execute_request(msg_id, handler, params)
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/pygls/protocol.py", line 264, in _execute_request
+    self._send_response(msg_id, handler(params))
+                                ^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi_language_server/server.py", line 362, in highlight
+    jedi_script = jedi_utils.script(server.project, document)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi_language_server/jedi_utils.py", line 118, in script
+    return Script(code=document.source, path=document.path, project=project)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/__init__.py", line 119, in __init__
+    self._inference_state = InferenceState(
+                            ^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/inference/__init__.py", line 87, in __init__
+    environment = project.get_environment()
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/project.py", line 245, in get_environment
+    self._environment = create_environment(self._environment_path, safe=False)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/environment.py", line 367, in create_environment
+    return Environment(_get_executable_path(path, safe=safe), env_vars=env_vars)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/environment.py", line 380, in _get_executable_path
+    raise InvalidPythonEnvironment("%s seems to be missing." % python)
+jedi.api.environment.InvalidPythonEnvironment: bin/python seems to be missing.
+
+2024-01-13 01:02:13.317 [info] [Error - 1:02:13 AM] Request textDocument/documentHighlight failed.
+2024-01-13 01:02:13.317 [info]   Message: jedi.api.environment.InvalidPythonEnvironment: bin/python seems to be missing.
+  Code: -32602 
+{'traceback': ['  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/pygls/protocol.py", line 340, in _handle_request\n    self._execute_request(msg_id, handler, params)\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/pygls/protocol.py", line 264, in _execute_request\n    self._send_response(msg_id, handler(params))\n                                ^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi_language_server/server.py", line 362, in highlight\n    jedi_script = jedi_utils.script(server.project, document)\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi_language_server/jedi_utils.py", line 118, in script\n    return Script(code=document.source, path=document.path, project=project)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/__init__.py", line 119, in __init__\n    self._inference_state = InferenceState(\n                            ^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/inference/__init__.py", line 87, in __init__\n    environment = project.get_environment()\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/project.py", line 245, in get_environment\n    self._environment = create_environment(self._environment_path, safe=False)\n                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/environment.py", line 367, in create_environment\n    return Environment(_get_executable_path(path, safe=safe), env_vars=env_vars)\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/environment.py", line 380, in _get_executable_path\n    raise InvalidPythonEnvironment("%s seems to be missing." % python)\n']}
+2024-01-13 01:02:13.318 [info] ERROR:pygls.protocol:Failed to handle request 11 textDocument/codeAction CodeActionParams(text_document=TextDocumentIdentifier(uri='file:///home/aexyzk/verlauf/verlauf/utils.py'), range=0:0-0:0, context=CodeActionContext(diagnostics=[], only=None, trigger_kind=<CodeActionTriggerKind.Automatic: 2>), work_done_token=None, partial_result_token=None)
+Traceback (most recent call last):
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/pygls/protocol.py", line 340, in _handle_request
+    self._execute_request(msg_id, handler, params)
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/pygls/protocol.py", line 264, in _execute_request
+    self._send_response(msg_id, handler(params))
+                                ^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi_language_server/server.py", line 549, in code_action
+    jedi_script = jedi_utils.script(server.project, document)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi_language_server/jedi_utils.py", line 118, in script
+    return Script(code=document.source, path=document.path, project=project)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/__init__.py", line 119, in __init__
+    self._inference_state = InferenceState(
+                            ^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/inference/__init__.py", line 87, in __init__
+    environment = project.get_environment()
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/project.py", line 245, in get_environment
+    self._environment = create_environment(self._environment_path, safe=False)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/environment.py", line 367, in create_environment
+    return Environment(_get_executable_path(path, safe=safe), env_vars=env_vars)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/environment.py", line 380, in _get_executable_path
+    raise InvalidPythonEnvironment("%s seems to be missing." % python)
+jedi.api.environment.InvalidPythonEnvironment: bin/python seems to be missing.
+
+2024-01-13 01:02:13.319 [info] [Error - 1:02:13 AM] Request textDocument/codeAction failed.
+2024-01-13 01:02:13.319 [info]   Message: jedi.api.environment.InvalidPythonEnvironment: bin/python seems to be missing.
+  Code: -32602 
+{'traceback': ['  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/pygls/protocol.py", line 340, in _handle_request\n    self._execute_request(msg_id, handler, params)\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/pygls/protocol.py", line 264, in _execute_request\n    self._send_response(msg_id, handler(params))\n                                ^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi_language_server/server.py", line 549, in code_action\n    jedi_script = jedi_utils.script(server.project, document)\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi_language_server/jedi_utils.py", line 118, in script\n    return Script(code=document.source, path=document.path, project=project)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/__init__.py", line 119, in __init__\n    self._inference_state = InferenceState(\n                            ^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/inference/__init__.py", line 87, in __init__\n    environment = project.get_environment()\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/project.py", line 245, in get_environment\n    self._environment = create_environment(self._environment_path, safe=False)\n                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/environment.py", line 367, in create_environment\n    return Environment(_get_executable_path(path, safe=safe), env_vars=env_vars)\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/environment.py", line 380, in _get_executable_path\n    raise InvalidPythonEnvironment("%s seems to be missing." % python)\n']}
+2024-01-13 01:02:13.320 [info] ERROR:pygls.protocol:Failed to handle request 12 textDocument/documentSymbol DocumentSymbolParams(text_document=TextDocumentIdentifier(uri='file:///home/aexyzk/verlauf/verlauf/utils.py'), work_done_token=None, partial_result_token=None)
+Traceback (most recent call last):
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/pygls/protocol.py", line 340, in _handle_request
+    self._execute_request(msg_id, handler, params)
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/pygls/protocol.py", line 264, in _execute_request
+    self._send_response(msg_id, handler(params))
+                                ^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi_language_server/server.py", line 435, in document_symbol
+    jedi_script = jedi_utils.script(server.project, document)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi_language_server/jedi_utils.py", line 118, in script
+    return Script(code=document.source, path=document.path, project=project)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/__init__.py", line 119, in __init__
+    self._inference_state = InferenceState(
+                            ^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/inference/__init__.py", line 87, in __init__
+    environment = project.get_environment()
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/project.py", line 245, in get_environment
+    self._environment = create_environment(self._environment_path, safe=False)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/environment.py", line 367, in create_environment
+    return Environment(_get_executable_path(path, safe=safe), env_vars=env_vars)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/environment.py", line 380, in _get_executable_path
+    raise InvalidPythonEnvironment("%s seems to be missing." % python)
+jedi.api.environment.InvalidPythonEnvironment: bin/python seems to be missing.
+
+2024-01-13 01:02:13.321 [info] [Error - 1:02:13 AM] Request textDocument/documentSymbol failed.
+2024-01-13 01:02:13.321 [info]   Message: jedi.api.environment.InvalidPythonEnvironment: bin/python seems to be missing.
+  Code: -32602 
+{'traceback': ['  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/pygls/protocol.py", line 340, in _handle_request\n    self._execute_request(msg_id, handler, params)\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/pygls/protocol.py", line 264, in _execute_request\n    self._send_response(msg_id, handler(params))\n                                ^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi_language_server/server.py", line 435, in document_symbol\n    jedi_script = jedi_utils.script(server.project, document)\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi_language_server/jedi_utils.py", line 118, in script\n    return Script(code=document.source, path=document.path, project=project)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/__init__.py", line 119, in __init__\n    self._inference_state = InferenceState(\n                            ^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/inference/__init__.py", line 87, in __init__\n    environment = project.get_environment()\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/project.py", line 245, in get_environment\n    self._environment = create_environment(self._environment_path, safe=False)\n                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/environment.py", line 367, in create_environment\n    return Environment(_get_executable_path(path, safe=safe), env_vars=env_vars)\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/environment.py", line 380, in _get_executable_path\n    raise InvalidPythonEnvironment("%s seems to be missing." % python)\n']}
+2024-01-13 01:02:15.157 [info] ERROR:pygls.protocol:Failed to handle request 13 textDocument/documentHighlight DocumentHighlightParams(text_document=TextDocumentIdentifier(uri='file:///home/aexyzk/verlauf/verlauf/hex.py'), position=0:0, work_done_token=None, partial_result_token=None)
+Traceback (most recent call last):
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/pygls/protocol.py", line 340, in _handle_request
+    self._execute_request(msg_id, handler, params)
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/pygls/protocol.py", line 264, in _execute_request
+    self._send_response(msg_id, handler(params))
+                                ^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi_language_server/server.py", line 362, in highlight
+    jedi_script = jedi_utils.script(server.project, document)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi_language_server/jedi_utils.py", line 118, in script
+    return Script(code=document.source, path=document.path, project=project)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/__init__.py", line 119, in __init__
+    self._inference_state = InferenceState(
+                            ^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/inference/__init__.py", line 87, in __init__
+    environment = project.get_environment()
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/project.py", line 245, in get_environment
+    self._environment = create_environment(self._environment_path, safe=False)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/environment.py", line 367, in create_environment
+    return Environment(_get_executable_path(path, safe=safe), env_vars=env_vars)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/environment.py", line 380, in _get_executable_path
+    raise InvalidPythonEnvironment("%s seems to be missing." % python)
+jedi.api.environment.InvalidPythonEnvironment: bin/python seems to be missing.
+
+2024-01-13 01:02:15.159 [info] [Error - 1:02:15 AM] Request textDocument/documentHighlight failed.
+2024-01-13 01:02:15.159 [info]   Message: jedi.api.environment.InvalidPythonEnvironment: bin/python seems to be missing.
+  Code: -32602 
+{'traceback': ['  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/pygls/protocol.py", line 340, in _handle_request\n    self._execute_request(msg_id, handler, params)\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/pygls/protocol.py", line 264, in _execute_request\n    self._send_response(msg_id, handler(params))\n                                ^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi_language_server/server.py", line 362, in highlight\n    jedi_script = jedi_utils.script(server.project, document)\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi_language_server/jedi_utils.py", line 118, in script\n    return Script(code=document.source, path=document.path, project=project)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/__init__.py", line 119, in __init__\n    self._inference_state = InferenceState(\n                            ^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/inference/__init__.py", line 87, in __init__\n    environment = project.get_environment()\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/project.py", line 245, in get_environment\n    self._environment = create_environment(self._environment_path, safe=False)\n                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/environment.py", line 367, in create_environment\n    return Environment(_get_executable_path(path, safe=safe), env_vars=env_vars)\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/environment.py", line 380, in _get_executable_path\n    raise InvalidPythonEnvironment("%s seems to be missing." % python)\n']}
+2024-01-13 01:02:15.160 [info] ERROR:pygls.protocol:Failed to handle request 14 textDocument/codeAction CodeActionParams(text_document=TextDocumentIdentifier(uri='file:///home/aexyzk/verlauf/verlauf/hex.py'), range=0:0-0:0, context=CodeActionContext(diagnostics=[], only=None, trigger_kind=<CodeActionTriggerKind.Automatic: 2>), work_done_token=None, partial_result_token=None)
+Traceback (most recent call last):
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/pygls/protocol.py", line 340, in _handle_request
+    self._execute_request(msg_id, handler, params)
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/pygls/protocol.py", line 264, in _execute_request
+    self._send_response(msg_id, handler(params))
+                                ^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi_language_server/server.py", line 549, in code_action
+    jedi_script = jedi_utils.script(server.project, document)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi_language_server/jedi_utils.py", line 118, in script
+    return Script(code=document.source, path=document.path, project=project)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/__init__.py", line 119, in __init__
+    self._inference_state = InferenceState(
+                            ^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/inference/__init__.py", line 87, in __init__
+    environment = project.get_environment()
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/project.py", line 245, in get_environment
+    self._environment = create_environment(self._environment_path, safe=False)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/environment.py", line 367, in create_environment
+    return Environment(_get_executable_path(path, safe=safe), env_vars=env_vars)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/environment.py", line 380, in _get_executable_path
+    raise InvalidPythonEnvironment("%s seems to be missing." % python)
+jedi.api.environment.InvalidPythonEnvironment: bin/python seems to be missing.
+
+2024-01-13 01:02:15.161 [info] [Error - 1:02:15 AM] Request textDocument/codeAction failed.
+2024-01-13 01:02:15.161 [info]   Message: jedi.api.environment.InvalidPythonEnvironment: bin/python seems to be missing.
+  Code: -32602 
+{'traceback': ['  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/pygls/protocol.py", line 340, in _handle_request\n    self._execute_request(msg_id, handler, params)\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/pygls/protocol.py", line 264, in _execute_request\n    self._send_response(msg_id, handler(params))\n                                ^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi_language_server/server.py", line 549, in code_action\n    jedi_script = jedi_utils.script(server.project, document)\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi_language_server/jedi_utils.py", line 118, in script\n    return Script(code=document.source, path=document.path, project=project)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/__init__.py", line 119, in __init__\n    self._inference_state = InferenceState(\n                            ^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/inference/__init__.py", line 87, in __init__\n    environment = project.get_environment()\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/project.py", line 245, in get_environment\n    self._environment = create_environment(self._environment_path, safe=False)\n                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/environment.py", line 367, in create_environment\n    return Environment(_get_executable_path(path, safe=safe), env_vars=env_vars)\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/environment.py", line 380, in _get_executable_path\n    raise InvalidPythonEnvironment("%s seems to be missing." % python)\n']}
+2024-01-13 01:02:15.162 [info] ERROR:pygls.protocol:Failed to handle request 15 textDocument/documentSymbol DocumentSymbolParams(text_document=TextDocumentIdentifier(uri='file:///home/aexyzk/verlauf/verlauf/hex.py'), work_done_token=None, partial_result_token=None)
+Traceback (most recent call last):
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/pygls/protocol.py", line 340, in _handle_request
+    self._execute_request(msg_id, handler, params)
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/pygls/protocol.py", line 264, in _execute_request
+    self._send_response(msg_id, handler(params))
+                                ^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi_language_server/server.py", line 435, in document_symbol
+    jedi_script = jedi_utils.script(server.project, document)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi_language_server/jedi_utils.py", line 118, in script
+    return Script(code=document.source, path=document.path, project=project)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/__init__.py", line 119, in __init__
+    self._inference_state = InferenceState(
+                            ^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/inference/__init__.py", line 87, in __init__
+    environment = project.get_environment()
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/project.py", line 245, in get_environment
+    self._environment = create_environment(self._environment_path, safe=False)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/environment.py", line 367, in create_environment
+    return Environment(_get_executable_path(path, safe=safe), env_vars=env_vars)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/environment.py", line 380, in _get_executable_path
+    raise InvalidPythonEnvironment("%s seems to be missing." % python)
+jedi.api.environment.InvalidPythonEnvironment: bin/python seems to be missing.
+
+2024-01-13 01:02:15.164 [info] [Error - 1:02:15 AM] Request textDocument/documentSymbol failed.
+2024-01-13 01:02:15.164 [info]   Message: jedi.api.environment.InvalidPythonEnvironment: bin/python seems to be missing.
+  Code: -32602 
+{'traceback': ['  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/pygls/protocol.py", line 340, in _handle_request\n    self._execute_request(msg_id, handler, params)\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/pygls/protocol.py", line 264, in _execute_request\n    self._send_response(msg_id, handler(params))\n                                ^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi_language_server/server.py", line 435, in document_symbol\n    jedi_script = jedi_utils.script(server.project, document)\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi_language_server/jedi_utils.py", line 118, in script\n    return Script(code=document.source, path=document.path, project=project)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/__init__.py", line 119, in __init__\n    self._inference_state = InferenceState(\n                            ^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/inference/__init__.py", line 87, in __init__\n    environment = project.get_environment()\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/project.py", line 245, in get_environment\n    self._environment = create_environment(self._environment_path, safe=False)\n                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/environment.py", line 367, in create_environment\n    return Environment(_get_executable_path(path, safe=safe), env_vars=env_vars)\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/environment.py", line 380, in _get_executable_path\n    raise InvalidPythonEnvironment("%s seems to be missing." % python)\n']}
+2024-01-13 01:02:31.800 [info] ERROR:pygls.protocol:Failed to handle request 16 textDocument/documentHighlight DocumentHighlightParams(text_document=TextDocumentIdentifier(uri='file:///home/aexyzk/verlauf/verlauf/__init__.py'), position=0:0, work_done_token=None, partial_result_token=None)
+Traceback (most recent call last):
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/pygls/protocol.py", line 340, in _handle_request
+    self._execute_request(msg_id, handler, params)
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/pygls/protocol.py", line 264, in _execute_request
+    self._send_response(msg_id, handler(params))
+                                ^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi_language_server/server.py", line 362, in highlight
+    jedi_script = jedi_utils.script(server.project, document)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi_language_server/jedi_utils.py", line 118, in script
+    return Script(code=document.source, path=document.path, project=project)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/__init__.py", line 119, in __init__
+    self._inference_state = InferenceState(
+                            ^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/inference/__init__.py", line 87, in __init__
+    environment = project.get_environment()
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/project.py", line 245, in get_environment
+    self._environment = create_environment(self._environment_path, safe=False)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/environment.py", line 367, in create_environment
+    return Environment(_get_executable_path(path, safe=safe), env_vars=env_vars)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/environment.py", line 380, in _get_executable_path
+    raise InvalidPythonEnvironment("%s seems to be missing." % python)
+jedi.api.environment.InvalidPythonEnvironment: bin/python seems to be missing.
+
+2024-01-13 01:02:31.803 [info] [Error - 1:02:31 AM] Request textDocument/documentHighlight failed.
+2024-01-13 01:02:31.803 [info]   Message: jedi.api.environment.InvalidPythonEnvironment: bin/python seems to be missing.
+  Code: -32602 
+{'traceback': ['  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/pygls/protocol.py", line 340, in _handle_request\n    self._execute_request(msg_id, handler, params)\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/pygls/protocol.py", line 264, in _execute_request\n    self._send_response(msg_id, handler(params))\n                                ^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi_language_server/server.py", line 362, in highlight\n    jedi_script = jedi_utils.script(server.project, document)\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi_language_server/jedi_utils.py", line 118, in script\n    return Script(code=document.source, path=document.path, project=project)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/__init__.py", line 119, in __init__\n    self._inference_state = InferenceState(\n                            ^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/inference/__init__.py", line 87, in __init__\n    environment = project.get_environment()\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/project.py", line 245, in get_environment\n    self._environment = create_environment(self._environment_path, safe=False)\n                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/environment.py", line 367, in create_environment\n    return Environment(_get_executable_path(path, safe=safe), env_vars=env_vars)\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/environment.py", line 380, in _get_executable_path\n    raise InvalidPythonEnvironment("%s seems to be missing." % python)\n']}
+2024-01-13 01:02:31.804 [info] ERROR:pygls.protocol:Failed to handle request 17 textDocument/codeAction CodeActionParams(text_document=TextDocumentIdentifier(uri='file:///home/aexyzk/verlauf/verlauf/__init__.py'), range=0:0-0:0, context=CodeActionContext(diagnostics=[], only=None, trigger_kind=<CodeActionTriggerKind.Automatic: 2>), work_done_token=None, partial_result_token=None)
+Traceback (most recent call last):
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/pygls/protocol.py", line 340, in _handle_request
+    self._execute_request(msg_id, handler, params)
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/pygls/protocol.py", line 264, in _execute_request
+    self._send_response(msg_id, handler(params))
+                                ^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi_language_server/server.py", line 549, in code_action
+    jedi_script = jedi_utils.script(server.project, document)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi_language_server/jedi_utils.py", line 118, in script
+    return Script(code=document.source, path=document.path, project=project)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/__init__.py", line 119, in __init__
+    self._inference_state = InferenceState(
+                            ^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/inference/__init__.py", line 87, in __init__
+    environment = project.get_environment()
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/project.py", line 245, in get_environment
+    self._environment = create_environment(self._environment_path, safe=False)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/environment.py", line 367, in create_environment
+    return Environment(_get_executable_path(path, safe=safe), env_vars=env_vars)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/environment.py", line 380, in _get_executable_path
+    raise InvalidPythonEnvironment("%s seems to be missing." % python)
+jedi.api.environment.InvalidPythonEnvironment: bin/python seems to be missing.
+
+2024-01-13 01:02:31.804 [info] [Error - 1:02:31 AM] Request textDocument/codeAction failed.
+2024-01-13 01:02:31.804 [info]   Message: jedi.api.environment.InvalidPythonEnvironment: bin/python seems to be missing.
+  Code: -32602 
+{'traceback': ['  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/pygls/protocol.py", line 340, in _handle_request\n    self._execute_request(msg_id, handler, params)\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/pygls/protocol.py", line 264, in _execute_request\n    self._send_response(msg_id, handler(params))\n                                ^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi_language_server/server.py", line 549, in code_action\n    jedi_script = jedi_utils.script(server.project, document)\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi_language_server/jedi_utils.py", line 118, in script\n    return Script(code=document.source, path=document.path, project=project)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/__init__.py", line 119, in __init__\n    self._inference_state = InferenceState(\n                            ^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/inference/__init__.py", line 87, in __init__\n    environment = project.get_environment()\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/project.py", line 245, in get_environment\n    self._environment = create_environment(self._environment_path, safe=False)\n                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/environment.py", line 367, in create_environment\n    return Environment(_get_executable_path(path, safe=safe), env_vars=env_vars)\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/environment.py", line 380, in _get_executable_path\n    raise InvalidPythonEnvironment("%s seems to be missing." % python)\n']}
+2024-01-13 01:02:31.805 [info] ERROR:pygls.protocol:Failed to handle request 18 textDocument/documentSymbol DocumentSymbolParams(text_document=TextDocumentIdentifier(uri='file:///home/aexyzk/verlauf/verlauf/__init__.py'), work_done_token=None, partial_result_token=None)
+Traceback (most recent call last):
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/pygls/protocol.py", line 340, in _handle_request
+    self._execute_request(msg_id, handler, params)
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/pygls/protocol.py", line 264, in _execute_request
+    self._send_response(msg_id, handler(params))
+                                ^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi_language_server/server.py", line 435, in document_symbol
+    jedi_script = jedi_utils.script(server.project, document)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi_language_server/jedi_utils.py", line 118, in script
+    return Script(code=document.source, path=document.path, project=project)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/__init__.py", line 119, in __init__
+    self._inference_state = InferenceState(
+                            ^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/inference/__init__.py", line 87, in __init__
+    environment = project.get_environment()
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/project.py", line 245, in get_environment
+    self._environment = create_environment(self._environment_path, safe=False)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/environment.py", line 367, in create_environment
+    return Environment(_get_executable_path(path, safe=safe), env_vars=env_vars)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/environment.py", line 380, in _get_executable_path
+    raise InvalidPythonEnvironment("%s seems to be missing." % python)
+jedi.api.environment.InvalidPythonEnvironment: bin/python seems to be missing.
+
+2024-01-13 01:02:31.806 [info] [Error - 1:02:31 AM] Request textDocument/documentSymbol failed.
+2024-01-13 01:02:31.806 [info]   Message: jedi.api.environment.InvalidPythonEnvironment: bin/python seems to be missing.
+  Code: -32602 
+{'traceback': ['  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/pygls/protocol.py", line 340, in _handle_request\n    self._execute_request(msg_id, handler, params)\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/pygls/protocol.py", line 264, in _execute_request\n    self._send_response(msg_id, handler(params))\n                                ^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi_language_server/server.py", line 435, in document_symbol\n    jedi_script = jedi_utils.script(server.project, document)\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi_language_server/jedi_utils.py", line 118, in script\n    return Script(code=document.source, path=document.path, project=project)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/__init__.py", line 119, in __init__\n    self._inference_state = InferenceState(\n                            ^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/inference/__init__.py", line 87, in __init__\n    environment = project.get_environment()\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/project.py", line 245, in get_environment\n    self._environment = create_environment(self._environment_path, safe=False)\n                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/environment.py", line 367, in create_environment\n    return Environment(_get_executable_path(path, safe=safe), env_vars=env_vars)\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/environment.py", line 380, in _get_executable_path\n    raise InvalidPythonEnvironment("%s seems to be missing." % python)\n']}
+2024-01-13 01:02:38.199 [info] ERROR:pygls.protocol:Failed to handle request 19 textDocument/documentHighlight DocumentHighlightParams(text_document=TextDocumentIdentifier(uri='file:///home/aexyzk/verlauf/verlauf/__main__.py'), position=0:0, work_done_token=None, partial_result_token=None)
+Traceback (most recent call last):
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/pygls/protocol.py", line 340, in _handle_request
+    self._execute_request(msg_id, handler, params)
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/pygls/protocol.py", line 264, in _execute_request
+    self._send_response(msg_id, handler(params))
+                                ^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi_language_server/server.py", line 362, in highlight
+    jedi_script = jedi_utils.script(server.project, document)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi_language_server/jedi_utils.py", line 118, in script
+    return Script(code=document.source, path=document.path, project=project)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/__init__.py", line 119, in __init__
+    self._inference_state = InferenceState(
+                            ^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/inference/__init__.py", line 87, in __init__
+    environment = project.get_environment()
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/project.py", line 245, in get_environment
+    self._environment = create_environment(self._environment_path, safe=False)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/environment.py", line 367, in create_environment
+    return Environment(_get_executable_path(path, safe=safe), env_vars=env_vars)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/environment.py", line 380, in _get_executable_path
+    raise InvalidPythonEnvironment("%s seems to be missing." % python)
+jedi.api.environment.InvalidPythonEnvironment: bin/python seems to be missing.
+
+2024-01-13 01:02:38.208 [info] [Error - 1:02:38 AM] Request textDocument/documentHighlight failed.
+2024-01-13 01:02:38.208 [info]   Message: jedi.api.environment.InvalidPythonEnvironment: bin/python seems to be missing.
+  Code: -32602 
+{'traceback': ['  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/pygls/protocol.py", line 340, in _handle_request\n    self._execute_request(msg_id, handler, params)\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/pygls/protocol.py", line 264, in _execute_request\n    self._send_response(msg_id, handler(params))\n                                ^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi_language_server/server.py", line 362, in highlight\n    jedi_script = jedi_utils.script(server.project, document)\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi_language_server/jedi_utils.py", line 118, in script\n    return Script(code=document.source, path=document.path, project=project)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/__init__.py", line 119, in __init__\n    self._inference_state = InferenceState(\n                            ^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/inference/__init__.py", line 87, in __init__\n    environment = project.get_environment()\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/project.py", line 245, in get_environment\n    self._environment = create_environment(self._environment_path, safe=False)\n                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/environment.py", line 367, in create_environment\n    return Environment(_get_executable_path(path, safe=safe), env_vars=env_vars)\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/environment.py", line 380, in _get_executable_path\n    raise InvalidPythonEnvironment("%s seems to be missing." % python)\n']}
+2024-01-13 01:02:38.210 [info] ERROR:pygls.protocol:Failed to handle request 20 textDocument/codeAction CodeActionParams(text_document=TextDocumentIdentifier(uri='file:///home/aexyzk/verlauf/verlauf/__main__.py'), range=0:0-0:0, context=CodeActionContext(diagnostics=[], only=None, trigger_kind=<CodeActionTriggerKind.Automatic: 2>), work_done_token=None, partial_result_token=None)
+Traceback (most recent call last):
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/pygls/protocol.py", line 340, in _handle_request
+    self._execute_request(msg_id, handler, params)
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/pygls/protocol.py", line 264, in _execute_request
+    self._send_response(msg_id, handler(params))
+                                ^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi_language_server/server.py", line 549, in code_action
+    jedi_script = jedi_utils.script(server.project, document)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi_language_server/jedi_utils.py", line 118, in script
+    return Script(code=document.source, path=document.path, project=project)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/__init__.py", line 119, in __init__
+    self._inference_state = InferenceState(
+                            ^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/inference/__init__.py", line 87, in __init__
+    environment = project.get_environment()
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/project.py", line 245, in get_environment
+    self._environment = create_environment(self._environment_path, safe=False)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/environment.py", line 367, in create_environment
+    return Environment(_get_executable_path(path, safe=safe), env_vars=env_vars)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/environment.py", line 380, in _get_executable_path
+    raise InvalidPythonEnvironment("%s seems to be missing." % python)
+jedi.api.environment.InvalidPythonEnvironment: bin/python seems to be missing.
+
+2024-01-13 01:02:38.211 [info] [Error - 1:02:38 AM] Request textDocument/codeAction failed.
+2024-01-13 01:02:38.212 [info]   Message: jedi.api.environment.InvalidPythonEnvironment: bin/python seems to be missing.
+  Code: -32602 
+{'traceback': ['  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/pygls/protocol.py", line 340, in _handle_request\n    self._execute_request(msg_id, handler, params)\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/pygls/protocol.py", line 264, in _execute_request\n    self._send_response(msg_id, handler(params))\n                                ^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi_language_server/server.py", line 549, in code_action\n    jedi_script = jedi_utils.script(server.project, document)\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi_language_server/jedi_utils.py", line 118, in script\n    return Script(code=document.source, path=document.path, project=project)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/__init__.py", line 119, in __init__\n    self._inference_state = InferenceState(\n                            ^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/inference/__init__.py", line 87, in __init__\n    environment = project.get_environment()\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/project.py", line 245, in get_environment\n    self._environment = create_environment(self._environment_path, safe=False)\n                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/environment.py", line 367, in create_environment\n    return Environment(_get_executable_path(path, safe=safe), env_vars=env_vars)\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/environment.py", line 380, in _get_executable_path\n    raise InvalidPythonEnvironment("%s seems to be missing." % python)\n']}
+2024-01-13 01:02:38.213 [info] ERROR:pygls.protocol:Failed to handle request 21 textDocument/documentSymbol DocumentSymbolParams(text_document=TextDocumentIdentifier(uri='file:///home/aexyzk/verlauf/verlauf/__main__.py'), work_done_token=None, partial_result_token=None)
+Traceback (most recent call last):
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/pygls/protocol.py", line 340, in _handle_request
+    self._execute_request(msg_id, handler, params)
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/pygls/protocol.py", line 264, in _execute_request
+    self._send_response(msg_id, handler(params))
+                                ^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi_language_server/server.py", line 435, in document_symbol
+    jedi_script = jedi_utils.script(server.project, document)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi_language_server/jedi_utils.py", line 118, in script
+    return Script(code=document.source, path=document.path, project=project)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/__init__.py", line 119, in __init__
+    self._inference_state = InferenceState(
+                            ^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/inference/__init__.py", line 87, in __init__
+    environment = project.get_environment()
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/project.py", line 245, in get_environment
+    self._environment = create_environment(self._environment_path, safe=False)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/environment.py", line 367, in create_environment
+    return Environment(_get_executable_path(path, safe=safe), env_vars=env_vars)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/environment.py", line 380, in _get_executable_path
+    raise InvalidPythonEnvironment("%s seems to be missing." % python)
+jedi.api.environment.InvalidPythonEnvironment: bin/python seems to be missing.
+
+2024-01-13 01:02:38.213 [info] [Error - 1:02:38 AM] Request textDocument/documentSymbol failed.
+2024-01-13 01:02:38.213 [info]   Message: jedi.api.environment.InvalidPythonEnvironment: bin/python seems to be missing.
+  Code: -32602 
+{'traceback': ['  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/pygls/protocol.py", line 340, in _handle_request\n    self._execute_request(msg_id, handler, params)\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/pygls/protocol.py", line 264, in _execute_request\n    self._send_response(msg_id, handler(params))\n                                ^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi_language_server/server.py", line 435, in document_symbol\n    jedi_script = jedi_utils.script(server.project, document)\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi_language_server/jedi_utils.py", line 118, in script\n    return Script(code=document.source, path=document.path, project=project)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/__init__.py", line 119, in __init__\n    self._inference_state = InferenceState(\n                            ^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/inference/__init__.py", line 87, in __init__\n    environment = project.get_environment()\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/project.py", line 245, in get_environment\n    self._environment = create_environment(self._environment_path, safe=False)\n                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/environment.py", line 367, in create_environment\n    return Environment(_get_executable_path(path, safe=safe), env_vars=env_vars)\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/environment.py", line 380, in _get_executable_path\n    raise InvalidPythonEnvironment("%s seems to be missing." % python)\n']}
+2024-01-13 01:02:38.455 [info] ERROR:pygls.protocol:Failed to handle request 22 textDocument/codeAction CodeActionParams(text_document=TextDocumentIdentifier(uri='file:///home/aexyzk/verlauf/verlauf/__main__.py'), range=13:72-13:72, context=CodeActionContext(diagnostics=[], only=None, trigger_kind=<CodeActionTriggerKind.Automatic: 2>), work_done_token=None, partial_result_token=None)
+Traceback (most recent call last):
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/pygls/protocol.py", line 340, in _handle_request
+    self._execute_request(msg_id, handler, params)
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/pygls/protocol.py", line 264, in _execute_request
+    self._send_response(msg_id, handler(params))
+                                ^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi_language_server/server.py", line 549, in code_action
+    jedi_script = jedi_utils.script(server.project, document)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi_language_server/jedi_utils.py", line 118, in script
+    return Script(code=document.source, path=document.path, project=project)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/__init__.py", line 119, in __init__
+    self._inference_state = InferenceState(
+                            ^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/inference/__init__.py", line 87, in __init__
+    environment = project.get_environment()
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/project.py", line 245, in get_environment
+    self._environment = create_environment(self._environment_path, safe=False)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/environment.py", line 367, in create_environment
+    return Environment(_get_executable_path(path, safe=safe), env_vars=env_vars)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/environment.py", line 380, in _get_executable_path
+    raise InvalidPythonEnvironment("%s seems to be missing." % python)
+jedi.api.environment.InvalidPythonEnvironment: bin/python seems to be missing.
+
+2024-01-13 01:02:38.456 [info] [Error - 1:02:38 AM] Request textDocument/codeAction failed.
+2024-01-13 01:02:38.456 [info]   Message: jedi.api.environment.InvalidPythonEnvironment: bin/python seems to be missing.
+  Code: -32602 
+{'traceback': ['  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/pygls/protocol.py", line 340, in _handle_request\n    self._execute_request(msg_id, handler, params)\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/pygls/protocol.py", line 264, in _execute_request\n    self._send_response(msg_id, handler(params))\n                                ^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi_language_server/server.py", line 549, in code_action\n    jedi_script = jedi_utils.script(server.project, document)\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi_language_server/jedi_utils.py", line 118, in script\n    return Script(code=document.source, path=document.path, project=project)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/__init__.py", line 119, in __init__\n    self._inference_state = InferenceState(\n                            ^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/inference/__init__.py", line 87, in __init__\n    environment = project.get_environment()\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/project.py", line 245, in get_environment\n    self._environment = create_environment(self._environment_path, safe=False)\n                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/environment.py", line 367, in create_environment\n    return Environment(_get_executable_path(path, safe=safe), env_vars=env_vars)\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/aexyzk/.vscode-oss/extensions/ms-python.python-2023.22.1-universal/pythonFiles/lib/jedilsp/jedi/api/environment.py", line 380, in _get_executable_path\n    raise InvalidPythonEnvironment("%s seems to be missing." % python)\n']}

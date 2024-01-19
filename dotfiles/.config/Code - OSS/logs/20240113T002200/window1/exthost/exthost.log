@@ -1,0 +1,10 @@
+2024-01-13 00:22:02.019 [info] Extension host with pid 42695 started
+2024-01-13 00:22:02.028 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+2024-01-13 00:22:02.035 [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+2024-01-13 00:22:02.114 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2024-01-13 00:22:02.162 [info] Eager extensions activated
+2024-01-13 00:22:02.170 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2024-01-13 00:22:02.172 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2024-01-13 00:22:02.195 [info] ExtensionService#_doActivateExtension ecmel.vscode-html-css, startup: false, activationEvent: 'onStartupFinished'
+2024-01-13 00:22:03.987 [info] Extension host terminating: renderer closed the MessagePort
+2024-01-13 00:22:03.990 [info] Extension host with pid 42695 exiting with code 0

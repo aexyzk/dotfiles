@@ -1,0 +1,10 @@
+2024-01-13 00:14:01.020 [info] Started local extension host with pid 17280.
+2024-01-13 00:14:01.105 [info] Started initializing default profile extensions in extensions installation folder. file:///home/aexyzk/.vscode-oss/extensions
+2024-01-13 00:14:01.432 [info] Completed initializing default profile extensions in extensions installation folder. file:///home/aexyzk/.vscode-oss/extensions
+2024-01-13 00:14:04.169 [info] [perf] Render performance baseline is 58ms
+2024-01-13 00:15:59.731 [error] Extension 'ms-python.python CANNOT USE these API proposals 'contribEditorContentMenu, quickPickSortByLabel, testObserver, quickPickItemTooltip, saveEditor, terminalDataWriteEvent, terminalExecuteCommandEvent'. You MUST start in extension development mode or use the --enable-proposed-api command line flag
+2024-01-13 00:15:59.751 [error] [ms-python.python]: editor/content is a proposed menu identifier. It requires 'package.json#enabledApiProposals: ["contribEditorContentMenu"]' and is only available when running out of dev or with the following command line switch: --enable-proposed-api ms-python.python
+2024-01-13 00:16:13.480 [error] [ms-python.python]: editor/content is a proposed menu identifier. It requires 'package.json#enabledApiProposals: ["contribEditorContentMenu"]' and is only available when running out of dev or with the following command line switch: --enable-proposed-api ms-python.python
+2024-01-13 00:16:30.335 [warning] [csharp]: Couldn't find message for key configuration.razor.server.trace.
+2024-01-13 00:16:30.362 [error] [ms-python.python]: editor/content is a proposed menu identifier. It requires 'package.json#enabledApiProposals: ["contribEditorContentMenu"]' and is only available when running out of dev or with the following command line switch: --enable-proposed-api ms-python.python
+2024-01-13 00:17:34.753 [error] [ms-python.python]: editor/content is a proposed menu identifier. It requires 'package.json#enabledApiProposals: ["contribEditorContentMenu"]' and is only available when running out of dev or with the following command line switch: --enable-proposed-api ms-python.python
