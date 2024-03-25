@@ -28,7 +28,7 @@ window {
   background-color: @bg;
   border: 2px;
   border-color: #e2e5fd;
-  border-radius: 8px;
+  border-radius: 0px;
 }
 
 element {
