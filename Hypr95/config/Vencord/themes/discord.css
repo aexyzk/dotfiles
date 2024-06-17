@@ -1,0 +1,249 @@
+/**
+ * @name Themes
+ * @author idk
+ * @version 1.0.0
+ * @description stuff
+ * @source https://gist.github.com/TheSunCat/58fedaa19d6154ef3e4b2b676c286906
+ */
+/*@import url("https://catppuccin.github.io/discord/dist/catppuccin-mocha.theme.css");
+@import url("https://catppuccin.github.io/discord/dist/catppuccin-mocha-pink.theme.css");
+*/
+
+/* ------------------ */
+/* Hide Nitro upsells */
+/* ------------------ */
+
+/* Chatbox buttons */
+div[aria-label="Start an Activity"] { display: none; }
+button[aria-label="Send a gift"] { display: none; }
+
+/* Hide Nitro button in Home */
+a[href="/store"] { display: none; }
+
+/* Hide shop button in Home */
+a[href="/shop"] { display: none; }
+
+/* TODO: join more than 100 servers upsell */
+
+/* Hide Nitro tabs in Settings */
+div[aria-label="User Settings"] > div[aria-label="Nitro"] { display: none; }
+div[aria-label="User Settings"] > div[aria-label="Nitro"] + div { display: none; }
+div[aria-label="User Settings"] > div[aria-label="Subscriptions"] { display: none; }
+div[aria-label="User Settings"] > div[aria-label="Gift Inventory"] + div[class^="item_"] { display: none; }
+
+/* Nitro separator in settings */
+/*div[aria-label="User Settings"] > div[aria-label="Gift Inventory"] + div[class^="item_"] + div[class^="separator"] { display: none; }*/
+/* Gift Inventory tab entirely */
+/*div[aria-label="User Settings"] > div[aria-label="Gift Inventory"] { display: none; }*/
+
+/* Hide Billing header and separator */
+div[aria-label="User Settings"] > div[aria-label="Clips"] + div[class^="item_"] + div[class^="separator_"] + div[class^="header_"] { display: none; }
+div[aria-label="User Settings"] > div[aria-label="Clips"] + div[class^="item_"] + div[class^="separator_"] + div[class^="header_"] ~ div[class^="header_"] { display: block; }
+
+/* Server Profiles: Make unique profiles for each server box */
+div[class*="upsellOverlayContainer_"] { display: none; }
+
+/* Profiles: Choose a GIF avatar */
+div[class^="optionBox"]:has(div[class^="text-sm-semibold"] > div[class^="optionBoxText"] > div[class^="optionBoxDescription"] > div[class^="nitroWheelFlairContainer"]) { display: none; }
+
+/* Profiles: Change decorations exclusive to Nitro */
+div[class*="decorationGridItem"]:has(div[class*="iconBadge"]) { display: none; } /* Decorations */
+div[class*="effectGridItem"]:has(div[class*="iconBadge"]) { display: none; } /* Effects */
+
+/* Profiles: Try out Nitro! box */
+div[class^="premiumFeatureBorder"] { display: none; }
+
+/* Profiles: New style ad */
+#profile-customization-tab > div[class^="container"]:has(button[class*="colorBrand"]) { display: none; }
+
+/* Profiles: Per server avatar */
+div[class^="imageUploaderInner"] + div[class^="imageUploaderHint"] { display: none; }
+div[class^="imageUploaderInner"] + div[class^="imageUploaderHint"] + div[class^="imageUploaderIcon"]{ display: none; }
+
+/* Profiles: Hide profile customization ad in banners */
+div[class^="bannerNitroUpsell"] { display: none;}
+
+/* Voice & Video: Soundboard section */
+div[class^="container"]:has(div[class^="children"] > div[class^="soundboardRow"]) { display: none; }
+
+/* Appearance: Hide app icon upsell */
+div[class^="selectionGroup"]:has(div[role="radiogroup"] > div > div[class^="presets"] > [class*="appIconSelectionContainer"]) { display: none; }
+
+/* Appearance: Theme upsells */
+section[class*="basicThemeSelectors_"] + section { display: none; }
+
+/* Hide message size upsells */
+div[class^="characterCount"] > div[class*=" upsell_"] { display: none; }
+
+/* Hide Go Live quality upsells */
+button[class*=" selectorButtonPremiumRequired"] { display: none; }
+
+/* Hide ad in profile banners */
+div[class^="premiumIconWrapper"] { display: none; }
+
+/* Hide "Level up your look" ad in account profile popout */
+div[class*="hasCollectiblesUpsell"] > div[class ^="userPopoutInner"] > div[class*="animation_"] { display: none; }
+
+/* Hide "Gift Nitro" button in DM User Profile sidebar */
+button[class*=" giftButton"] { display: none; }
+
+/* Emoji popout: "Get nitro" button */
+button[class^=shinyButton]:has(div[class*=premiumSubscribeButton]) { display: none; }
+
+/* Emoji popout: "Powered by nitro" text */
+div[class^=nitroTextAndBadge] { display: none; }
+
+/* Hide "Custom emojis" Nitro text from hover tooltip */
+div[class^=tooltipPremiumContent] { display: none; }
+
+/* Emoji autocomplete upsell (wowww this stoops low, even for them) */
+div[class^="nitroTopDividerContainer"], div[class^="nitroTopDividerContainer"] ~ div { display: none; }
+
+/* Hide the 'Unlock these emoji with Nitro' in emoji picker */
+div[class^=upsellContainer] { display: none; }
+
+/* Remove the purple background in the emoji picker and autocomplete */
+div[class*=categorySectionNitroLocked] { background-color: unset !important; }
+
+/* Remove the purple divider at the bottom of the emoji picker*/
+div[class^=nitroBottomDivider] { display: none; }
+
+/* Hide the lock icon on servers icon in the emoji picker */
+div[class^=categoryItemLockIconContainer] { display: none; }
+
+/* Hide the lock icon on emoji in the emoji picker */
+div[class^=emojiLockIconContainer] { display: none; }
+
+/* Restore old grayscale filter on Nitro emojis so you don't accidentally click them and get an ad */
+div[class*=categorySectionNitroLocked] > ul > li > button > img[class^="lockedEmoji"] { filter: grayscale(); }
+
+/* Grayscale for emoji that are simply locked and not in the Nitro section */
+button:has(div[class^=emojiLockIconContainer]) { filter: grayscale(); }
+
+/* Avatar decorations upsell */
+div[class*="userProfileInner_"] > div:has(div[aria-label="Go to Shop"]) { display: none; }
+
+/* ------------- */
+/* Server boosts */
+/* ------------- */
+
+/* Server Boost button in top left dropdown */
+div[id="guild-header-popout-premium-subscribe"] { display: none; }
+div[role="group"]:has(div[id="guild-header-popout-premium-subscribe"]) + div[role="separator"] { display: none; }
+
+/* Server settings: Boost tab */
+div[class^="serverBoostTabItem"] { display: none; }
+div[class^="serverBoostTabItem"] + div[class^="separator"] { display: none; }
+
+/* Server settings: Overview */
+div[class^="divider"]:has(div > div > div > div[class^="upsell"]) { display: none; }
+
+/* TODO: Hide role icon in Roles tab when we don't have boost lvl 2 */
+
+/* Server settings: Stickers tab */
+/* NOTE: risky, but seems ok for now */
+div[class^="children_"] > div[class^="upsellContainer"] { display: none; }
+div[class*="tierHeaderUnlocked"] + div { display: none; }
+div[class*="tier_"]:has(div[class^="tierHeaderLocked"]) { display: none; }
+div[class^="tierInProgress"] { display: none; }
+
+/* Server settings: Custom Invite Link tab */
+button[class^="shinyButton"]:has(div[class*="upsellButton"]) { display: none; }
+
+/* Boost progress bar */
+/* NOTE: risky, but seems ok for now */
+ul[aria-label="Channels"] > li > div[role="button"][class^="container"] { display: none; }
+
+/* TODO: would be nice to hide disabled soundboard sounds & emojis
+ * However, looks like it needs to be done on the JS level. This is too buggy
+div[class*="premiumDisabled_"] {display:none;}*/
+
+/* --------------- */
+/* Super reactions */
+/* --------------- */
+
+/* Super reactions button */
+button[id="super-reaction-picker-tab"] { display: none; }
+
+/* Super reaction animation */
+div[class*="shakeReaction"] { animation: none !important; }
+div[class^="reactionInner"] > div > div[class^="effectsWrapper"] { display: none; }
+img[class*="hideEmoji"] { animation: blink-emoji 1s linear infinite; opacity: 255; }
+@keyframes blink-emoji {  
+  50% { opacity: 0; }
+}
+
+/* Add Super Reaction menu item */
+#message-add-reaction-1 { display: none; }
+#message-actions-add-reaction-1 { display: none; }
+div[aria-label="Add Super Reaction"] { display: none; }
+
+/* Upsell when hovering a Super Reaction */
+div[class^="burstReactionTooltipPrompt"] { display: none; }
+
+/* --------------------------------- */
+/* Quests (straight up paid ads lol) */
+/* --------------------------------- */
+
+/* Hide quests from the gift inventory */
+div[class^="questsContainer"] > * { display: none; }
+
+/* Completed quest profile badge (doesn't provide any use so...) */
+a[aria-label^="Completed a Quest"] { display: none; }
+
+/* Ad area above username */
+section[class^="panels"] > div[class^="wrapper"] > div:has(div[class^="questUnacceptedContent"]) { display: none; }
+
+/* ------------------ */
+/* General annoyances */
+/* ------------------ */
+
+/* Chatbox buttons */
+/*button[aria-label="Open GIF picker"] { display: none; }
+button[aria-label="Open sticker picker"] { display: none; }
+
+/* Stickers tab in emoji/GIF picker (can always be opened if needed with Ctrl+S) */
+button[id="sticker-picker-tab"] { display: none; }
+
+/* Avatar decorations */
+svg[class*="avatarDecoration_"] { display: none; }
+img[class^="avatarDecoration_"] { display: none; }
+
+/* Profile effects */
+div[class^="profileEffects"] { display: none; }
+
+/* Animated "Activities" hover effect in calls */
+/* NOTE: would be nice to disable the white hover effect,
+ * but that'd break when you're actually in an activity */ 
+div[aria-labelledby^="vc-activities"] { display: none; }
+
+/* Bugfix laggy server scroll */
+div[data-dnd-name] > div[class^="wrapper"] svg { overflow: hidden; }
+
+/* Hide Help button */
+div[aria-label="Help"] { display: none; }
+
+/* Hide explore servers button */
+div[aria-label="Servers"] + div + div { display: none; }
+
+/* Hide download button in web version */
+div[aria-label="Servers"] + div[class^="tutorialContainer"] + div + div { display: none; } /* separator */
+div[aria-label="Servers"] + div[class^="tutorialContainer"] + div + div + div { display: none; } /* button & click target */
+
+/* Hide Library button in Home */
+a[data-list-item-id*="___library"] { display: none; }
+
+/* Nitro profile badges */
+/*a[aria-label^="Subscriber since"], a[aria-label^="Early Supporter"] { display: none; }*/
+
+/* Server booster profile badge */
+/* a[aria-label^="Server boosting since"] { display: none; } */
+
+/* Server booster member list badge */
+/* svg[aria-label^="Server boosting since"] { display: none; } */
+
+/* Hide all super reactions entirely */
+/* div[id*="message-reactions"] div:has(div div[aria-label*="super reaction"]) { display: none; } */
+
+/* Hide "Active Now" sidebar in friends list */
+/* div[class^="nowPlayingColumn"] { display: none; } */

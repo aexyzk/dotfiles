@@ -1,0 +1,166 @@
+* {
+  border: none;
+  border-radius: 0;
+  min-height: 0;
+  font-family: Material Design Icons, JetbrainsMono Nerd Font;
+}
+
+window#waybar {
+  background-color: rgba(192, 192, 192, 1);
+  border-top: rgba(251, 251, 251, 1) 1px solid;
+  transition-property: background-color;
+  transition-duration: 0.5s;
+  opacity: 1;
+}
+
+window#waybar.hidden {
+  opacity: 0.5;
+}
+
+#workspaces {
+  background-color: transparent;
+}
+
+#workspaces button {
+  all: initial; /* Remove GTK theme values (waybar #1351) */
+  min-width: 0; /* Fix weird spacing in materia (waybar #450) */
+  box-shadow: inset 0 -3px transparent; /* Use box-shadow instead of border so the text isn't offset */
+  color: rgb(0,0,0);
+  padding: 2px 8px;
+  padding-right: 104px;
+  margin: 3px 1px;
+  border-bottom: rgb(132, 132, 132) solid 2px;
+  border-right: rgb(132, 132, 132) solid 2px;
+  border-left: rgb(251,251,251) solid 2px;
+  border-top: rgb(251,251,251) solid 2px;
+}
+
+#workspaces button.active {
+  background-color: rgb(222, 222, 222);
+  border-top: rgb(132, 132, 132) solid 2px;
+  border-left: rgb(132, 132, 132) solid 2px;
+  border-bottom: rgb(251,251,251) solid 1px;
+  border-right: rgb(251,251,251) solid 1px;
+}
+
+#workspaces button.urgent {
+  background-color: rgb(242, 5, 5);
+}
+
+#window,
+#memory,
+#custom-power,
+#battery,
+#backlight,
+#pulseaudio,
+#network,
+#clock,
+#mpd,
+#disk,
+#tray {
+  all: initial; /* Remove GTK theme values (waybar #1351) */
+  min-width: 0; /* Fix weird spacing in materia (waybar #450) */
+  color: rgb(0,0,0);
+  font-family: JetBrainsMono Nerd Font;
+}
+
+#memory,
+#custom-power,
+#battery,
+#backlight,
+#pulseaudio,
+#network,
+#disk,
+#tray {
+  font-size: 16px;
+  font-family: JetBrainsMono Nerd Font;
+}
+
+#custom-logo {
+  box-shadow: inset 0 -3px transparent; /* Use box-shadow instead of border so the text isn't offset */
+  color: rgb(0,0,0);
+  padding: 2px 8px;
+  margin: 3px 1px 3px 3px;
+  border-bottom: rgb(132, 132, 132) solid 2px;
+  border-right: rgb(132, 132, 132) solid 2px;
+  border-left: rgb(251,251,251) solid 2px;
+  border-top: rgb(251,251,251) solid 2px;
+  font-weight: bold;
+}
+
+#mpd {
+  font-family: JetBrainsMono Nerd Font;
+  box-shadow: inset 0 -3px transparent; /* Use box-shadow instead of border so the text isn't offset */
+  color: rgb(0,0,0);
+  padding: 2px 8px;
+  margin: 3px 1px;
+  border-bottom: rgb(132, 132, 132) solid 2px;
+  border-right: rgb(132, 132, 132) solid 2px;
+  border-left: rgb(251,251,251) solid 2px;
+  border-top: rgb(251,251,251) solid 2px;
+}
+
+#none {
+  border-bottom: rgb(132, 132, 132) solid 2px;
+  border-right: rgb(132, 132, 132) solid 2px;
+  border-left: rgb(251,251,251) solid 2px;
+  border-top: rgb(251,251,251) solid 2px; 
+
+}
+
+#clock {
+  color: rgb(0,0,0);
+  padding: 2px 8px;
+  margin: 2px 3px 2px 0px;
+  border-top: rgb(132, 132, 132) solid 2px;
+  border-bottom: rgb(251,251,251) solid 1px;
+  border-right: rgb(251,251,251) solid 1px;
+}
+
+#network,
+#pulseaudio,
+#battery {
+  color: rgb(0,0,0);
+  margin: 2px 0px 2px 0px;
+  padding: 2px 6px;
+  border-top: rgb(132, 132, 132) solid 2px;
+  border-bottom: rgb(251,251,251) solid 1px;
+}
+
+#tray {
+  color: rgb(0,0,0);
+  margin: 2px 0px 2px 0px;
+  padding: 2px 6px;
+  border-top: rgb(132, 132, 132) solid 2px;
+  border-left: rgb(132, 132, 132) solid 2px;
+  border-bottom: rgb(251,251,251) solid 1px;
+}
+
+#battery.warning,
+#battery.critical,
+#battery.urgent {
+}
+#battery.charging {
+}
+
+#backlight {
+}
+
+#pulseaudio {
+}
+
+#network {
+}
+
+#window {
+  color: rgb(205, 214, 244);
+}
+
+tooltip {
+  border: rgb(0,0,0) solid 1px;
+  background-color: rgb(255,255,255);
+}
+
+tooltip label {
+  color: rgb(0,0,0);
+}

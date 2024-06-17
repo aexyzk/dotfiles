@@ -1,0 +1,29 @@
+set modifiable
+set write
+
+set nocompatible
+set number relativenumber
+set laststatus=2
+
+set bg=dark
+
+set hlsearch
+set incsearch
+
+set clipboard=unamedplus
+
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+
+set expandtab
+set autoindent
+set fileformat=unix
+
+syntax on
+set encoding=utf8
+set wildmode=longest,list,full
+
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+
+nnoremap S :%s//<Left>

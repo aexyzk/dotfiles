@@ -1,0 +1,36 @@
+#
+# ~/.bashrc
+#
+
+PATH=~/.local/bin:$PATH
+PATH=~/apps/:$PATH
+
+figlet Welcome
+description=$(lsb_release -d | awk -F"\t" '{print $2}')
+echo "Welcome to $description"
+echo -e "\tType 'help' for a list of commands\n"
+
+echo  -n "It's "
+date +"%A, %B %d"
+date +"%H:%M - %Y.%m.%d"
+echo ""
+
+hyfetch
+
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+alias ls='ls --color=auto'
+alias grep='grep --color=auto'
+alias diff='diff --color=auto'
+alias grep='grep --color=auto'
+alias ip='ip -color=auto'
+
+alias neofetch='hyfetch'
+alias sudo='doas'
+
+alias list_packages='pacman -Qn > /home/aexyzk/Downloads/test.txt'
+alias vencord_install='sh -c "$(curl -sS https://raw.githubusercontent.com/Vendicated/VencordInstaller/main/install.sh)"'
+
+PS1='\u@\h \W\> '
+
