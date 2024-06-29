@@ -5,20 +5,45 @@
 PATH=~/.local/bin:$PATH
 PATH=~/apps/:$PATH
 
-figlet Welcome
-description=$(lsb_release -d | awk -F"\t" '{print $2}')
-echo "Welcome to $description"
-echo -e "\tType 'help' for a list of commands\n"
-
-echo  -n "It's "
-date +"%A, %B %d"
-date +"%H:%M - %Y.%m.%d"
-echo ""
-
-hyfetch
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
+
+set_ps1() {
+  # https://gist.github.com/fnky/458719343aabd01cfb17a3a4f7296797#256-colors
+  # ^ Use the 256-colors IDs
+	local accent_color_1='183'
+	local accent_color_2='129'
+	local text_color_1='239'
+	local text_color_2='228'
+	local dirchar_color='129'
+
+	local pwd2=$(echo "$PWD" | sed -e "s:$HOME:~:" -e "s:\([^/]\)/:\1$(printf ' \356\202\261 '):g")
+	PS1="\n\342\224\214\342\224\200 \[\e[38;5;$(echo $accent_color_1)m\]\356\202\262\[\e[0m\e[48;5;$(echo $accent_color_1)m\e[38;5;$(echo $text_color_1)m\] \u@\h \[\e[0m\e[48;5;$(echo $accent_color_2)m\e[38;5;$(echo $accent_color_1)m\]\356\202\260\[\e[38;5;$(echo $text_color_2)m\] $pwd2 \[\e[0m\e[38;5;$(echo $accent_color_2)m\]\356\202\260\n\[\e[38;2;121;79;153m\]$\[\e[0m\] "
+}
+
+silly_ps1() {
+
+    PS1="┌─ ⚞ UwU ⚟\n└─╼"
+}
+
+PROMPT_COMMAND="set_ps1"
+
+clear
+
+# welcome shiz
+
+if (( $LINES >= 11 )); then
+    figlet Welcome
+    echo "Welcome to Awch Winyux"
+    echo -e "\tType 'help' for a list of commands\n"
+    echo  -n "It's "
+    date +"%A, %B %d"
+    date +"%H:%M - %Y.%m.%d"
+    echo ""
+fi
+
+# alias
 
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
@@ -26,11 +51,11 @@ alias diff='diff --color=auto'
 alias grep='grep --color=auto'
 alias ip='ip -color=auto'
 
-alias neofetch='hyfetch'
+alias hyfetch='hyfetch --ascii ~/.config/neofetch/ascii'
+alias neofetch='hyfetch --ascii ~/.config/neofetch/ascii'
+
 alias sudo='doas'
+alias please='doas'
 
 alias list_packages='pacman -Qn > /home/aexyzk/Downloads/test.txt'
 alias vencord_install='sh -c "$(curl -sS https://raw.githubusercontent.com/Vendicated/VencordInstaller/main/install.sh)"'
-
-PS1='\u@\h \W\> '
-
