@@ -1,5 +1,5 @@
 import = [
-    "~/.config/alacritty/themes/themes/catppuccin_mocha.toml"
+    "~/.config/alacritty/themes/catppuccin_mocha.toml"
 ]
 
 [font]
@@ -27,12 +27,12 @@ y = 0
 
 [window]
 decorations = "none"
-opacity = 0.95
+opacity = 0.9
 
 [window.dimensions]
 columns = 100
 lines = 24
 
 [window.padding]
-x = 10
-y = 10
+x = 15
+y = 15
